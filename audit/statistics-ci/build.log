@@ -1,0 +1,125 @@
+✔ [2781/2887] Built Ginibre.BorderedDeterminant (3.1s)
+✔ [2952/2978] Built Ginibre.Kernel (3.4s)
+✔ [2958/2978] Built Ginibre.FiniteProjection (3.7s)
+✔ [2959/2978] Built Ginibre.RadialMoments (3.9s)
+✔ [2960/2979] Built Ginibre.SchurJacobian (2.7s)
+✔ [2961/2979] Built Ginibre.PolynomialZeroSets (3.2s)
+✔ [2962/3001] Built Ginibre.DeterminantMarginal (3.2s)
+✔ [2978/3136] Built Ginibre.SlaterDensity (3.5s)
+✔ [3057/3136] Built Ginibre.SchurRealJacobian (2.8s)
+✔ [3061/3136] Built Ginibre.PolarIntegration (3.7s)
+✔ [3062/3136] Built Ginibre.ExpConjugation (2.8s)
+⚠ [3063/3136] Built Ginibre.Eigenbasis (3.1s)
+warning: Ginibre/Eigenbasis.lean:65:40: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [LinearMap.toMatrix_apply, hb]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Ginibre/Eigenbasis.lean:66:40: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [LinearMap.toMatrix_apply, hb, Finsupp.single_apply, hij, Ne.symm hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Ginibre/Eigenbasis.lean:66:63: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [LinearMap.toMatrix_apply, hb, Matrix.diagonal_apply, hij, Ne.symm hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Ginibre/Eigenbasis.lean:67:11: This simp argument is unused:
+  Ne.symm hij
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [LinearMap.toMatrix_apply, hb, Matrix.diagonal_apply, Finsupp.single_apply, hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [3064/3136] Built Ginibre.SchurDifferential (2.8s)
+✔ [3065/3136] Built Ginibre.BlockLinearDeterminant (2.8s)
+✔ [3066/3136] Built Ginibre.GaussianEntries (3.2s)
+⚠ [3067/3136] Built Ginibre.MonomialOrthogonality (3.8s)
+warning: Ginibre/MonomialOrthogonality.lean:46:48: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [3068/3136] Built Ginibre.MovingConjugation (2.9s)
+⚠ [3069/3136] Built Ginibre.GramSchmidtSchur (3.0s)
+warning: Ginibre/GramSchmidtSchur.lean:27:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [3070/3136] Built Ginibre.SchurCalculus (2.8s)
+✔ [3071/3136] Built Ginibre.MatrixConjugationDeterminant (2.6s)
+✔ [3072/3136] Built Ginibre.SingletonSpectrum (2.7s)
+✔ [3073/3136] Built Ginibre.MatrixDensity (2.0s)
+✔ [3074/3136] Built Ginibre.GaussianBasis (3.0s)
+✔ [3075/3136] Built Ginibre.ExpAngularConjugation (3.0s)
+✔ [3076/3136] Built Ginibre.SimpleSpectrum (2.0s)
+✔ [3077/3136] Built Ginibre.SchurGaussian (3.1s)
+✔ [3078/3136] Built Ginibre.DeterminantalDensity (3.3s)
+✔ [3079/3136] Built Ginibre.Projection (3.1s)
+✔ [3080/3136] Built Ginibre.SchurRegularity (2.2s)
+✔ [3081/3136] Built Ginibre.KernelDeterminants (2.8s)
+✔ [3082/3136] Built Ginibre.SchurOrderedSpectrum (3.1s)
+✔ [3083/3136] Built Ginibre.SchurExistence (3.1s)
+✔ [3084/3136] Built Ginibre.SchurTangent (3.4s)
+✔ [3085/3136] Built Ginibre.FiniteMarginals (4.0s)
+✔ [3086/3136] Built Ginibre.SchurEntrySplit (3.3s)
+✔ [3087/3136] Built Ginibre.SchurOrderedBasis (3.9s)
+✔ [3088/3136] Built Ginibre.SchurCoordinates (5.2s)
+✔ [3089/3136] Built Ginibre.SchurProductEntries (2.7s)
+✔ [3090/3136] Built Ginibre.SchurSylvester (3.1s)
+✔ [3091/3136] Built Ginibre.SchurSmooth (3.8s)
+✔ [3092/3136] Built Ginibre.SchurFullJacobian (4.3s)
+✔ [3093/3136] Built Ginibre.SchurAuxiliaryGaussian (3.5s)
+✔ [3094/3136] Built Ginibre.SchurPhaseUniqueness (3.2s)
+✔ [3095/3136] Built Ginibre.SchurChartCoverage (6.7s)
+✔ [3096/3136] Built Ginibre.SchurMovingFrame (3.5s)
+✔ [3097/3136] Built Ginibre.SchurCountableAtlas (2.1s)
+✔ [3098/3136] Built Ginibre.SchurAngularPatch (2.8s)
+✔ [3099/3136] Built Ginibre.SchurAngularJacobian (4.0s)
+✔ [3100/3136] Built Ginibre.SchurReferenceOrbit (2.2s)
+✔ [3101/3136] Built Ginibre.SchurAngularCoverage (2.1s)
+✔ [3102/3136] Built Ginibre.SchurJacobianEverywhere (4.0s)
+✔ [3103/3136] Built Ginibre.SchurLocalIntegration (3.5s)
+✔ [3104/3136] Built Ginibre.SchurProductVolume (2.4s)
+✔ [3105/3136] Built Ginibre.MarginalCoordinates (2.4s)
+✔ [3106/3136] Built Ginibre.SchurProductGaussian (2.9s)
+✔ [3107/3136] Built Ginibre.SchurOrderedPatch (3.4s)
+✔ [3108/3136] Built Ginibre.GaussianCoordinateLaw (2.9s)
+✔ [3109/3136] Built Ginibre.SchurDensityNormalization (2.9s)
+✔ [3110/3136] Built Ginibre.SchurExtendedCoverage (2.8s)
+✔ [3111/3136] Built Ginibre.SchurJacobianRegularity (3.4s)
+✔ [3112/3136] Built Ginibre.SchurSpectrum (2.3s)
+✔ [3113/3136] Built Ginibre.SchurExtendedIntegration (3.4s)
+✔ [3114/3136] Built Ginibre.SchurAngularOverlap (2.5s)
+✔ [3115/3136] Built Ginibre.SchurDisjointAtlas (2.2s)
+✔ [3116/3136] Built Ginibre.SchurGlobalChartIntegration (2.1s)
+✔ [3117/3136] Built Ginibre.SchurSeparatedIntegration (2.5s)
+✔ [3118/3136] Built Ginibre.SchurSpectrumMeasurability (2.3s)
+⚠ [3119/3136] Built Ginibre.SchurPermutations (2.6s)
+warning: Ginibre/SchurPermutations.lean:36:48: `_root_.not_imp` has been deprecated: Use `Classical.not_imp` instead
+✔ [3120/3136] Built Ginibre.SchurAngularIntegration (2.9s)
+✔ [3121/3136] Built Ginibre.SchurChamberIntegration (2.2s)
+✔ [3122/3136] Built Ginibre.SchurSpectralLaw (2.3s)
+✔ [3123/3136] Built Ginibre.SchurChamberNormalization (2.3s)
+✔ [3124/3136] Built Ginibre.SpectralLabelAveraging (2.2s)
+✔ [3125/3136] Built Ginibre.GaussianLabelledLaw (2.1s)
+✔ [3126/3136] Built Ginibre.ActualCorrelations (2.1s)
+✔ [3127/3136] Built Ginibre.ActualMarginals (2.5s)
+✔ [3128/3136] Built Ginibre.SpectralIntegrals (2.3s)
+✔ [3129/3136] Built Ginibre.SpectralCounting (2.5s)
+✔ [3130/3136] Built Ginibre.StatisticKernels (2.5s)
+✔ [3131/3136] Built Ginibre.LinearStatistics (2.5s)
+✔ [3132/3136] Built Ginibre.StatisticIntegrability (3.5s)
+✔ [3133/3136] Built Ginibre.GaussianCovariance (3.8s)
+✔ [3134/3136] Built Ginibre.AllDimensionsStatistics (2.7s)
+✔ [3135/3136] Built Ginibre (1.8s)
+Build completed successfully (3136 jobs).

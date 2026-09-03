@@ -1,12 +1,18 @@
 # Scope and completion boundary
 
-The two independently requested targets are complete at the audited
+The independently requested targets and statistics extension are complete at the audited
 2026-09-03 checkpoint:
 
 1. Explicit Ginibre reproducing/projection identities, including the
    weighted absolute-integrability result.
 2. Actual iid complex Gaussian entries -> actual eigenvalue joint density
    -> all finite labelled marginal laws and factorial correlation measures.
+3. Actual distinct-index counting, signed integration, moments, covariance,
+   the variance energy identity, and an explicit L2 variance bound.
+
+There is no unfinished proof or remaining external mathematical interface
+within these scoped targets. All 525 theorems in 83 modules passed the
+cloud root build and axiom audit, including zero and one dimensions.
 
 The second arrow is not inferred from candidate-density normalization.
 The development proves the actual Schur coordinate changes, their
@@ -30,7 +36,7 @@ internally. Data records store actual constructed matrices and proved
 properties; they are not uninstantiated external interfaces.
 
 Every authored theorem is included in the root import closure and in
-`Audit.lean`. See [the final verification record](audit/verification-spectral-law.md).
+`Audit.lean`. See [the final verification record](audit/verification-statistics.md).
 
 ## Correlation convention
 
@@ -41,14 +47,14 @@ in the standard equivalent convention as `n!/(n-k)!` times its
 `k`-label marginal. Its kernel-determinant density is proved at measure
 level, not just as a candidate marginal integral.
 
-The `codex/linear-statistics` extension adds the separate combinatorial
+The verified statistics extension adds the separate combinatorial
 API expressing this measure as the expectation of a sum over injective
 index selections, signed spectral integration with L1 transport, and
 the actual linear-statistic expectation/covariance/variance formulas.
 The L2 hypotheses imply every required intermediate L1 assertion.
 Zero and one dimensions are handled explicitly. The extension contains
-62 additional theorems in seven modules; its cloud verification status
-is stated in the README. It adds no external mathematical interface.
+62 additional theorems in seven modules. It adds no external mathematical
+interface and leaves no pending statistics wrapper in this scope.
 
 ## Outside this independent task
 

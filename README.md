@@ -6,17 +6,16 @@ finite eigenvalue correlation densities derived from **actual independent
 complex Gaussian matrix entries**, without assuming a Schur density or
 an eigenvalue-distribution interface.
 
-The core root build and all 463 theorem axiom audits passed on 2026-09-03
-(3128 build jobs, 76 mathematical modules). See
-[audit/verification-spectral-law.md](audit/verification-spectral-law.md).
+The full root build and all 525 theorem axiom audits passed on GitHub
+Actions on 2026-09-03 (3136 build jobs, 83 mathematical modules). See
+[audit/verification-statistics.md](audit/verification-statistics.md).
 The only audited axioms are subsets of Lean/mathlib's standard
 `propext`, `Classical.choice`, and `Quot.sound`.
 
-The `codex/linear-statistics` development branch adds signed integration,
-distinct-index Campbell formulas, and L2 covariance/variance corollaries
-(83 modules, 525 theorem declarations in total). This extension is being
-checked by GitHub Actions; the preceding 463-theorem checkpoint remains
-the last completed audit until the branch run passes.
+The verified development also includes signed integration, distinct-index
+Campbell formulas, and actual L2 covariance/variance corollaries, including
+the zero- and one-dimensional cases. No additional mathematical input is
+assumed for these extensions.
 
 ## What is proved
 
@@ -73,8 +72,7 @@ intermediate one-/two-point L1 requirements are proved from these
 conditions. Unbounded tests are allowed. The all-dimensions endpoints
 include zero and one; the one-dimensional proof uses the rank-one
 kernel and the one-point law, not a nonexistent two-label marginal.
-These extension endpoints remain subject to the branch verification
-status stated at the top of this README.
+All these endpoints are included in the root build and all-theorem audit.
 
 ## Models and normalization
 
@@ -135,10 +133,11 @@ lake env lean -j 1 Audit.lean
 ```
 
 Local dependencies are a private APFS copy-on-write snapshot, not shared
-writable build directories. No large cache was downloaded. Module builds
-were run serially, followed by the root; `weakLeanArgs = ["-j", "1"]`
-keeps each Lean process single-worker. No heartbeat, recursion-depth, or
-similar checking limit was raised.
+writable build directories. No large cache was downloaded locally.
+Local module builds were serial; the final complete build and audit run
+on GitHub-hosted Linux, which fetches its own pinned dependencies.
+`weakLeanArgs = ["-j", "1"]` keeps each Lean process single-worker.
+No heartbeat, recursion-depth, or similar checking limit was raised.
 
 All authored mathematical modules are imported by `Ginibre.lean`.
 `Audit.lean` audits every theorem and prints the major endpoint types and
@@ -147,9 +146,9 @@ the actual spectral-law definitions. The authored sources contain no
 proof-option overrides.
 
 Execution records:
-[build](audit/build-spectral-law.log),
-[axioms](audit/axioms-spectral-law.log),
-[source checksums](audit/sources-spectral-law.sha256).
+[cloud build](audit/statistics-ci/build.log),
+[all theorem axioms](audit/statistics-ci/axioms.log),
+[source checksums](audit/sources-statistics.sha256).
 Historical audit files are retained and are not the latest checkpoint.
 
 This project neither imports nor writes to Section 3, its vendor tree,
@@ -158,7 +157,8 @@ It is published independently as
 [ginibre-correlation-identities-lean](https://github.com/hanyi162013-Yihan/ginibre-correlation-identities-lean).
 GitHub Actions performs the root build and checks complete all-theorem
 audit coverage against the standard-axiom whitelist. CI logs are retained
-as run artifacts; the checked-in logs below document the local checkpoint.
+as run artifacts; the latest checked-in logs are downloaded from the
+successful cloud run. The old local core checkpoint is preserved separately.
 [REMAINING.md](REMAINING.md) records scope and non-goals.
 
 ## Mathematical source files
