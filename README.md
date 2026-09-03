@@ -6,11 +6,17 @@ finite eigenvalue correlation densities derived from **actual independent
 complex Gaussian matrix entries**, without assuming a Schur density or
 an eigenvalue-distribution interface.
 
-Full root build and all 463 theorem axiom audits passed on 2026-09-03
+The core root build and all 463 theorem axiom audits passed on 2026-09-03
 (3128 build jobs, 76 mathematical modules). See
 [audit/verification-spectral-law.md](audit/verification-spectral-law.md).
 The only audited axioms are subsets of Lean/mathlib's standard
 `propext`, `Classical.choice`, and `Quot.sound`.
+
+The `codex/linear-statistics` development branch adds signed integration,
+distinct-index Campbell formulas, and L2 covariance/variance corollaries
+(83 modules, 525 theorem declarations in total). This extension is being
+checked by GitHub Actions; the preceding 463-theorem checkpoint remains
+the last completed audit until the branch run passes.
 
 ## What is proved
 

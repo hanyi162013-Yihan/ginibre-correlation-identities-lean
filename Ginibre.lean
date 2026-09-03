@@ -11,3 +11,4 @@ import Ginibre.SchurCountableAtlas
 import Ginibre.SchurSmooth
 import Ginibre.SchurLocalIntegration
 import Ginibre.ActualMarginals
+import Ginibre.AllDimensionsStatistics

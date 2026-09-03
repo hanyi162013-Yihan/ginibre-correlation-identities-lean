@@ -536,3 +536,75 @@ no external mathematical axiom or admitted proof is allowed. -/
 #print Ginibre.schurGlobalAngularCoefficient
 #check @Ginibre.lintegral_schurSpectrum_proportional
 #check @Ginibre.gaussianLabelledSpectralLaw_permute
+
+-- Signed spectral integrals, distinct-index counting, and actual moments.
+#print axioms Ginibre.abs_mul_le_sq_add_sq_div_two
+#print axioms Ginibre.aemeasurable_gaussianMatrix_spectrum
+#print axioms Ginibre.card_spectralSelections
+#print axioms Ginibre.continuous_ginibreIntensity
+#print axioms Ginibre.factorialStatistic_one
+#print axioms Ginibre.factorialStatistic_symmetric
+#print axioms Ginibre.factorialStatistic_two
+#print axioms Ginibre.gaussianEigenvalueCovariance_all
+#print axioms Ginibre.gaussianEigenvalueCovariance_eq
+#print axioms Ginibre.gaussianEigenvalueCovariance_one
+#print axioms Ginibre.gaussianEigenvalueVariance_all_energy
+#print axioms Ginibre.gaussianEigenvalueVariance_all_le
+#print axioms Ginibre.gaussianEigenvalueVariance_eq_energy
+#print axioms Ginibre.gaussianEigenvalueVariance_le
+#print axioms Ginibre.gaussianLabelled_selected_map
+#print axioms Ginibre.gaussianMatrix_factorialStatistic
+#print axioms Ginibre.gaussianMatrix_integrable_linearStatistic
+#print axioms Ginibre.gaussianMatrix_integrable_linearStatistic_of_sq
+#print axioms Ginibre.gaussianMatrix_integral_linearStatistic
+#print axioms Ginibre.gaussianMatrix_integral_linearStatistic_all
+#print axioms Ginibre.gaussianMatrix_integral_linearStatistic_mul
+#print axioms Ginibre.gaussianMatrix_integral_linearStatistic_mul_planar
+#print axioms Ginibre.gaussianMatrix_integral_linearStatistic_planar
+#print axioms Ginibre.gaussianMatrix_symmetric_statistic_map
+#print axioms Ginibre.ginibreCovarianceForm_eq_energy
+#print axioms Ginibre.ginibreIntensity_nonneg
+#print axioms Ginibre.ginibreMarginalDensity_nonneg
+#print axioms Ginibre.ginibrePairIntensity_nonneg
+#print axioms Ginibre.integrable_factorialStatistic
+#print axioms Ginibre.integrable_finOne_iff
+#print axioms Ginibre.integrable_finOne_kernelDet_mul_of_sq
+#print axioms Ginibre.integrable_finTwo_iff
+#print axioms Ginibre.integrable_finTwo_kernelDet_of_sq
+#print axioms Ginibre.integrable_gaussianLabelled_selected_iff
+#print axioms Ginibre.integrable_gaussianMatrix_symmetric_iff
+#print axioms Ginibre.integrable_gaussianRetainedSpectralLaw_iff
+#print axioms Ginibre.integrable_ginibreIntensity
+#print axioms Ginibre.integrable_kernelWeight_fst
+#print axioms Ginibre.integrable_kernelWeight_mul_of_sq
+#print axioms Ginibre.integrable_kernelWeight_snd
+#print axioms Ginibre.integrable_marginal_of_kernelDet
+#print axioms Ginibre.integrable_mul_ginibreIntensity_of_sq
+#print axioms Ginibre.integrable_mul_mul_ginibreIntensity_of_sq
+#print axioms Ginibre.integrable_pairIntensity_mul_of_sq
+#print axioms Ginibre.integral_factorialStatistic
+#print axioms Ginibre.integral_finOne
+#print axioms Ginibre.integral_finTwo
+#print axioms Ginibre.integral_gaussianLabelledSpectralLaw
+#print axioms Ginibre.integral_gaussianLabelled_selected
+#print axioms Ginibre.integral_gaussianMatrix_symmetric
+#print axioms Ginibre.integral_gaussianRetainedSpectralLaw
+#print axioms Ginibre.integral_ginibreIntensity
+#print axioms Ginibre.integral_kernelWeight_fst
+#print axioms Ginibre.integral_kernelWeight_snd
+#print axioms Ginibre.kernelDet_two_re
+#print axioms Ginibre.kernelWeight_one
+#print axioms Ginibre.kernel_diagonal_re
+#print axioms Ginibre.linearStatistic_mul
+#print axioms Ginibre.linearStatistic_one_mul
+#print axioms Ginibre.marginalRetainedIndex_injective
+#print axioms Ginibre.measurable_factorialStatistic
+#print axioms Ginibre.measurable_selectedSpectrum
+
+#check @Ginibre.gaussianMatrix_factorialStatistic
+#check @Ginibre.gaussianMatrix_integral_linearStatistic_all
+#check @Ginibre.gaussianEigenvalueCovariance_all
+#check @Ginibre.gaussianEigenvalueVariance_all_energy
+#check @Ginibre.gaussianEigenvalueVariance_all_le
+#print Ginibre.gaussianEigenvalueCovariance
+#print Ginibre.gaussianEigenvalueVariance
