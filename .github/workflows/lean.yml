@@ -1,0 +1,50 @@
+name: Lean build and axiom audit
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lean-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - name: Check authored source and audit coverage
+        run: python3 scripts/check_audit.py
+      - name: Install pinned Lean and mathlib dependencies
+        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9 # v1.5.0
+        with:
+          auto-config: "false"
+          build: "false"
+          test: "false"
+          lint: "false"
+          use-mathlib-cache: "true"
+          use-github-cache: "true"
+      - name: Build every authored module
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verification-ci
+          lake --no-cache build 2>&1 | tee verification-ci/build.log
+      - name: Audit every authored theorem
+        shell: bash
+        run: |
+          set -euo pipefail
+          lake --no-cache env lean -j 1 Audit.lean 2>&1 | tee verification-ci/axioms.log
+          python3 scripts/check_audit.py verification-ci/axioms.log
+      - name: Retain build and audit evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: ginibre-verification-${{ github.run_id }}
+          path: verification-ci/*.log
+          if-no-files-found: ignore
+          retention-days: 14

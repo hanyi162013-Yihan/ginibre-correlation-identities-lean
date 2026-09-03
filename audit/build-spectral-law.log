@@ -1,0 +1,48 @@
+$ lake --no-cache build
+⚠ [2759/2911] Replayed Ginibre.MonomialOrthogonality
+warning: Ginibre/MonomialOrthogonality.lean:46:48: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3072/3128] Replayed Ginibre.Eigenbasis
+warning: Ginibre/Eigenbasis.lean:65:40: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [LinearMap.toMatrix_apply, hb]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Ginibre/Eigenbasis.lean:66:40: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [LinearMap.toMatrix_apply, hb, Finsupp.single_apply, hij, Ne.symm hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Ginibre/Eigenbasis.lean:66:63: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [LinearMap.toMatrix_apply, hb, Matrix.diagonal_apply, hij, Ne.symm hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Ginibre/Eigenbasis.lean:67:11: This simp argument is unused:
+  Ne.symm hij
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [LinearMap.toMatrix_apply, hb, Matrix.diagonal_apply, Finsupp.single_apply, hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3073/3128] Replayed Ginibre.GramSchmidtSchur
+warning: Ginibre/GramSchmidtSchur.lean:27:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3119/3128] Replayed Ginibre.SchurPermutations
+warning: Ginibre/SchurPermutations.lean:36:48: `_root_.not_imp` has been deprecated: Use `Classical.not_imp` instead
+✔ [3127/3128] Built Ginibre (63s)
+Build completed successfully (3128 jobs).
+Exit code: 0

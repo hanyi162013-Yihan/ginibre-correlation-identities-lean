@@ -1,0 +1,694 @@
+$ lake env lean -j 1 Audit.lean
+'Ginibre.integrableOn_radial_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_radial_even_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_angular_mode' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_of_polar_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_polar_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_norm_pow_mul_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_gaussian_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_norm_even_pow_mul_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.angular_integral_eq_circleAverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussian_monomial_circle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.circleAverage_gaussian_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_gaussian_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_finiteKernel_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_finiteKernel_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_finiteKernel_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_finiteKernel_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianBasis_inner_integrand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_gaussianBasis_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_gaussianBasis_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianBasis_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.kernel_eq_finiteKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.kernel_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_kernel_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_kernel_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_kernelWeight_section' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_kernelWeight_section' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_weighted_kernel_fst' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_weighted_kernel_fst' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.weighted_projection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_complexGaussianDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_complexGaussianDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianEntryLaw_isProbability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianMatrixLaw_isProbability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianMatrix_entries_independent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianMatrix_entry_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_gaussianEntryLaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_gaussianEntryLaw_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_gaussianMatrixDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_gaussianMatrixDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianMatrixLaw_eq_withDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianMatrixDensity_closedForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.singleton_hasEigenvalue_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.singleton_first_correlation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.slater_norm_sq_expand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_slater_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_permutation_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_slater_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_finiteKernel_eq_slater_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_determinantDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_determinantDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.determinantDensity_eq_kernel_determinant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.slater_gaussianBasis_vandermonde' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.vandermonde_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.determinantDensity_vandermonde' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.determinantDensity_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.finiteKernel_star' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.finiteKernel_product_expand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.finiteKernel_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.basisCoefficient_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.continuous_gaussianBasis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.continuous_complexGaussianDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.complexGaussianDensity_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.complexGaussianDensity_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.kernel_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.continuous_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianMatrixDensity_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.polar_restrict_volume' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.kernel_star' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.kernelWeight_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.sign_mul_sign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_bordered' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.sum_entry_cofactor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.kernelDet_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.kernelDet_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.kernelDet_cons_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_finiteKernel_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_finiteKernel_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_kernelDet_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_kernelDet_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_finiteKernelDet_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.finiteKernelDet_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.kernelDet_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.norm_kernelDet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.continuous_kernelDet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_kernel_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_kernel_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_ginibreKernelDet_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_ginibreKernelDet_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.prependPoints_cons' depends on axioms: [propext]
+'Ginibre.continuous_prependPoints' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_fin_cons_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_fin_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_kernelDet_prepend' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_kernelDet_prepend' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.marginal_factorial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_determinantDensity_prepend' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_determinantDensity_prepend' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_determinantDensity_prepend_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLower_lt_iff' depends on axioms: [propext, Quot.sound]
+'Ginibre.schurLowerMatrix_diag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLowerMatrix_isLowerTriangular' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_schurLowerMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.norm_sq_det_schurLowerMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLowerMatrix_eq_commutator_single' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLowerMatrix_mulVec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_complexRealBlock' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.complexRealBlock_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.complexRealBlock_mulVec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_realifyMatrix_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.realifyMatrix_blockTriangular' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_realifyMatrix_of_lowerTriangular' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_real_schurLowerMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_schur_bordered_differential' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLower_ext' depends on axioms: [Quot.sound]
+'Ginibre.schurLowerEmbed_apply_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLowerEmbed_apply_of_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSkewEmbed_conjTranspose' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSkewEmbed_apply_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSkewEmbed_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLowerEmbed_conjTranspose_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.upper_commutator_lower_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLowerMatrix_mulVec_skew' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schur_differential_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_real_schurLowerMatrix_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.hasDerivAt_matrix_mul_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.hasDerivAt_matrix_conjTranspose_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.hasDerivAt_schur_conjugation_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.unitary_curve_derivative_skew' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.hasDerivAt_schur_lower_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.matrixEnergy_eq_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.matrixEnergy_unitary_conjugate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.matrixEnergy_diagonal_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schur_gaussian_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianMatrixDensity_schur' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.polynomial_eval_ne_zero_ae' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.mvPolynomial_eval_ne_zero_ae_pi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.mvPolynomial_zeroSet_measure_pi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.mvPolynomial_zeroSet_volume' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.collisionPolynomial_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.collisionPolynomial_eval_ne_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.diagonal_nat_charpoly_separable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.collisionPolynomial_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.charpoly_separable_ae_volume' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianMatrix_charpoly_separable_ae' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.charpoly_unitary_conjugate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.upper_charpoly_separable_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_real_schurLowerMatrix_pos_of_separable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianMatrix_schur_regular_ae' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.card_charpoly_distinct_roots' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exists_eigenbasis_of_charpoly_separable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.toMatrix_eigenbasis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.basisToMatrix_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.basisToMatrix_upper_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gramSchmidt_eigenbasis_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exists_orthonormal_schur_basis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exists_unitary_schur_of_separable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exists_regular_unitary_schur_of_separable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianMatrix_exists_regular_schur_ae' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLowerEmbed_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLowerEmbed_real_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSkewEmbed_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSkewEmbed_real_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.isUnit_schurLowerMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurTangentMap_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurTangentMap_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurTangentMap_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurTangentEquiv_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.hasStrictFDerivAt_exp_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.hasStrictFDerivAt_exp_conjugation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurUnitaryParam_unitary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurUnitaryParam_adjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurExpCoordinates_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurExpCoordinates_eq_conjugation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.hasStrictFDerivAt_schurExpCoordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLocalChart_zero_mem_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLocalChart_center_mem_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurChartAt_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurChartAt_zero_mem_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurChartAt_center_mem_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exists_schur_chart_of_separable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianMatrix_schur_chart_coverage_ae' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exists_schurFrame_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exists_countable_schur_atlas' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianMatrix_countable_schur_atlas_ae' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.contDiff_exp_conjugation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.contDiff_schurExpCoordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.hasStrictFDerivAt_schurLocalChart_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+Ginibre.weighted_projection : ∀ (n : ℕ) {g : ℂ → ℝ},
+  Measurable g →
+    (∀ (z : ℂ), 0 ≤ g z) →
+      MeasureTheory.Integrable (fun z => g z * Ginibre.onePointDensity n z) MeasureTheory.volume →
+        MeasureTheory.Integrable (fun zw => (g zw.1 + g zw.2) * Ginibre.kernelWeight n zw) MeasureTheory.volume ∧
+          ∫ (zw : ℂ × ℂ), (g zw.1 + g zw.2) * Ginibre.kernelWeight n zw =
+            2 * ↑n * ∫ (z : ℂ), g z * Ginibre.onePointDensity n z
+Ginibre.gaussianMatrixLaw_eq_withDensity : ∀ (n : ℕ) {a : ℝ},
+  0 < a →
+    Ginibre.gaussianMatrixLaw n a =
+      MeasureTheory.volume.withDensity fun A => ENNReal.ofReal (Ginibre.gaussianMatrixDensity n a A)
+Ginibre.singleton_first_correlation : ∀ (f : ℂ → ℝ),
+  Measurable f →
+    MeasureTheory.Integrable f (Ginibre.gaussianEntryLaw 1) →
+      MeasureTheory.Integrable (fun A => f (A (0, 0))) (Ginibre.gaussianMatrixLaw 1 1) ∧
+        ∫ (A : Fin 1 × Fin 1 → ℂ), f (A (0, 0)) ∂Ginibre.gaussianMatrixLaw 1 1 =
+          ∫ (z : ℂ), f z * Ginibre.onePointDensity 1 z
+Ginibre.integral_determinantDensity : ∀ (n : ℕ) {a : ℝ}, 0 < a → ∫ (z : Fin n → ℂ), Ginibre.determinantDensity n a z = 1
+Ginibre.integral_ginibreKernelDet_cons : ∀ (n k : ℕ) (z : Fin k → ℂ),
+  ∫ (u : ℂ), Ginibre.kernelDet (Ginibre.kernel n) (k + 1) (Fin.cons u z) =
+    (↑n - ↑k) * Ginibre.kernelDet (Ginibre.kernel n) k z
+Ginibre.integrable_determinantDensity_prepend : ∀ (k m : ℕ) (z : Fin k → ℂ),
+  MeasureTheory.Integrable (fun w => Ginibre.determinantDensity (k + m) (↑(k + m)) (Ginibre.prependPoints k m w z))
+    MeasureTheory.volume
+Ginibre.integral_determinantDensity_prepend_real : ∀ (k m : ℕ) (z : Fin k → ℂ),
+  ∫ (w : Fin m → ℂ), Ginibre.determinantDensity (k + m) (↑(k + m)) (Ginibre.prependPoints k m w z) =
+    ↑m.factorial / ↑(k + m).factorial * (Ginibre.kernelDet (Ginibre.kernel (k + m)) k z).re
+@Ginibre.det_real_schurLowerMatrix : ∀ {n : ℕ} (S : Matrix (Fin n) (Fin n) ℂ),
+  S.IsUpperTriangular →
+    (Ginibre.realifyMatrix (Ginibre.schurLowerMatrix S)).det =
+      ∏ p, ‖S (Ginibre.schurCol p) (Ginibre.schurCol p) - S (Ginibre.schurRow p) (Ginibre.schurRow p)‖ ^ 2
+@Ginibre.hasDerivAt_schur_lower_entry : ∀ {n : ℕ} (U V : ℝ → Matrix (Fin n) (Fin n) ℂ) (D S : Matrix (Fin n) (Fin n) ℂ)
+  (ω : Ginibre.SchurLower n → ℂ),
+  (∀ (i j : Fin n), HasDerivAt (fun t => U t i j) (Ginibre.schurSkewEmbed ω i j) 0) →
+    (∀ (i j : Fin n), HasDerivAt (fun t => V t i j) (D i j) 0) →
+      U 0 = 1 →
+        V 0 = S →
+          S.IsUpperTriangular →
+            D.IsUpperTriangular →
+              ∀ (p : Ginibre.SchurLower n),
+                HasDerivAt (fun t => (U t * V t * (U t).conjTranspose) (Ginibre.schurRow p) (Ginibre.schurCol p))
+                  ((Ginibre.schurLowerMatrix S).mulVec ω p) 0
+@Ginibre.gaussianMatrixDensity_schur : ∀ {n : ℕ} (a : ℝ) (z : Fin n → ℂ) (U T : Matrix (Fin n) (Fin n) ℂ),
+  U.conjTranspose * U = 1 →
+    (∀ (i : Fin n), T i i = 0) →
+      (Ginibre.gaussianMatrixDensity n a fun ij => (U * (Matrix.diagonal z + T) * U.conjTranspose) ij.1 ij.2) =
+        (a / Real.pi) ^ (n * n) * (Real.exp (-a * ∑ i, ‖z i‖ ^ 2) * Real.exp (-a * Ginibre.matrixEnergy T))
+Ginibre.gaussianMatrix_charpoly_separable_ae : ∀ (n : ℕ) {a : ℝ},
+  0 < a → ∀ᵐ (A : Fin n × Fin n → ℂ) ∂Ginibre.gaussianMatrixLaw n a, (Matrix.of (Function.curry A)).charpoly.Separable
+Ginibre.gaussianMatrix_schur_regular_ae : ∀ (n : ℕ) {a : ℝ},
+  0 < a →
+    ∀ᵐ (A : Fin n × Fin n → ℂ) ∂Ginibre.gaussianMatrixLaw n a,
+      ∀ (U S : Matrix (Fin n) (Fin n) ℂ),
+        U.conjTranspose * U = 1 →
+          S.IsUpperTriangular →
+            Matrix.of (Function.curry A) = U * S * U.conjTranspose →
+              0 < (Ginibre.realifyMatrix (Ginibre.schurLowerMatrix S)).det
+@Ginibre.exists_eigenbasis_of_charpoly_separable : ∀ {E : Type u_1} [inst : AddCommGroup E] [inst_1 : Module ℂ E]
+  [inst_2 : FiniteDimensional ℂ E] (n : ℕ) (f : Module.End ℂ E),
+  Module.finrank ℂ E = n →
+    (LinearMap.charpoly f).Separable → ∃ b z, Function.Injective z ∧ ∀ (i : Fin n), f (b i) = z i • b i
+Ginibre.gaussianMatrix_exists_regular_schur_ae : ∀ (n : ℕ) {a : ℝ},
+  0 < a →
+    ∀ᵐ (A : Fin n × Fin n → ℂ) ∂Ginibre.gaussianMatrixLaw n a,
+      ∃ U S,
+        U.conjTranspose * U = 1 ∧
+          S.IsUpperTriangular ∧
+            Matrix.of (Function.curry A) = U * S * U.conjTranspose ∧
+              0 < (Ginibre.realifyMatrix (Ginibre.schurLowerMatrix S)).det
+@Ginibre.schurTangentEquiv : {n : ℕ} →
+  (S : Matrix (Fin n) (Fin n) ℂ) →
+    S.IsUpperTriangular → (Function.Injective fun i => S i i) → Ginibre.SchurTangent n ≃L[ℝ] Matrix (Fin n) (Fin n) ℂ
+@Ginibre.hasStrictFDerivAt_schurExpCoordinates : ∀ {n : ℕ} (S : Matrix (Fin n) (Fin n) ℂ),
+  HasStrictFDerivAt (Ginibre.schurExpCoordinates S) (LinearMap.toContinuousLinearMap (Ginibre.schurTangentMap S)) 0
+@Ginibre.schurLocalChart : {n : ℕ} →
+  (S : Matrix (Fin n) (Fin n) ℂ) →
+    S.IsUpperTriangular →
+      (Function.Injective fun i => S i i) → OpenPartialHomeomorph (Ginibre.SchurTangent n) (Matrix (Fin n) (Fin n) ℂ)
+Ginibre.gaussianMatrix_schur_chart_coverage_ae : ∀ (n : ℕ) {a : ℝ},
+  0 < a →
+    ∀ᵐ (A : Fin n × Fin n → ℂ) ∂Ginibre.gaussianMatrixLaw n a,
+      ∃ U S,
+        ∃ (hU : U.conjTranspose * U = 1) (hS : S.IsUpperTriangular) (hz : Function.Injective fun i => S i i),
+          Matrix.of (Function.curry A) = U * S * U.conjTranspose ∧
+            Matrix.of (Function.curry A) ∈ (Ginibre.schurChartAt U S hU hS hz).target
+Ginibre.gaussianMatrix_countable_schur_atlas_ae : ∀ (n : ℕ) {a : ℝ},
+  0 < a →
+    ∃ C,
+      C.Countable ∧
+        ∀ᵐ (A : Fin n × Fin n → ℂ) ∂Ginibre.gaussianMatrixLaw n a,
+          ∃ c ∈ C, Matrix.of (Function.curry A) ∈ c.chart.target
+@Ginibre.contDiff_schurExpCoordinates : ∀ {n : ℕ} (k : WithTop ℕ∞) (S : Matrix (Fin n) (Fin n) ℂ),
+  ContDiff ℝ k (Ginibre.schurExpCoordinates S)
+@Ginibre.hasStrictFDerivAt_schurLocalChart_symm : ∀ {n : ℕ} (S : Matrix (Fin n) (Fin n) ℂ) (hS : S.IsUpperTriangular)
+  (hz : Function.Injective fun i => S i i),
+  HasStrictFDerivAt (↑(Ginibre.schurLocalChart S hS hz).symm) (↑(Ginibre.schurTangentEquiv S hS hz).symm) S
+'Ginibre.det_block_lower_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_complex_matrix_restrictScalars' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.fderiv_schurExpCoordinates_rotated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurRotatedDifferential_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_schurRotatedDifferential' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurAngularFrame_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurAngularJacobian_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurTangentMap_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_schurCoordinateDifferential' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.hasStrictFDerivAt_schurEntryCoordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_fderiv_schurEntryCoordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_fderiv_schurEntryCoordinates_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLowerEntries_embed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLowerEntries_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schur_upper_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurUpperEntries_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurEntrySplit_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurEntrySplit_symm_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.matrixTwoSidedMul_entries' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_matrixTwoSidedMul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_matrixTwoSidedMul_real_of_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLowerEntries_commutator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurMovingTangentMap_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_schurMovingTangentMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.differentiable_exp_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exp_neg_linear_mul_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.fderiv_exp_angular_conjugation_rotated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.fderiv_mul_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.inverse_frame_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.fderiv_conjugation_rotated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_schurEntryConjugation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.fderiv_schurEntryCoordinates_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurRotatedDifferential_eq_output_comp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_schurRotatedDifferential_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_fderiv_schurEntryCoordinates_everywhere' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.abs_det_fderiv_schurEntryCoordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurCoordinateVolume_isAddHaarMeasure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurJacobianWeight_eq_abs_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurEntryCoordinates_injOn_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.differentiable_schurEntryCoordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurEntryCoordinates_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrableOn_schurEntryCoordinates_image_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_schurEntryCoordinates_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Ginibre.det_fderiv_schurEntryCoordinates_everywhere : ∀ {n : ℕ} (S : Matrix (Fin n) (Fin n) ℂ),
+  S.IsUpperTriangular →
+    ∀ (x : Ginibre.SchurTangent n),
+      (fderiv ℝ (Ginibre.schurEntryCoordinates S) x).det =
+        (∏ p,
+            ‖(S + ↑x.2) (Ginibre.schurCol p) (Ginibre.schurCol p) -
+                  (S + ↑x.2) (Ginibre.schurRow p) (Ginibre.schurRow p)‖ ^
+              2) *
+          Ginibre.schurAngularJacobian x.1
+Ginibre.schurAngularJacobian_zero : ∀ (n : ℕ), Ginibre.schurAngularJacobian 0 = 1
+@Ginibre.lintegral_schurEntryCoordinates_image : ∀ {n : ℕ} (S : Matrix (Fin n) (Fin n) ℂ) (hS : S.IsUpperTriangular)
+  (hz : Function.Injective fun i => S i i) (s : Set (Ginibre.SchurTangent n)),
+  MeasurableSet s →
+    s ⊆ (Ginibre.schurLocalChart S hS hz).source →
+      ∀ (g : Ginibre.SchurTangent n → ENNReal),
+        ∫⁻ (y : Ginibre.SchurTangent n) in Ginibre.schurEntryCoordinates S '' s, g y ∂Ginibre.schurCoordinateVolume n =
+          ∫⁻ (x : Ginibre.SchurTangent n) in s,
+            ENNReal.ofReal (Ginibre.schurJacobianWeight S x) *
+              g (Ginibre.schurEntryCoordinates S x) ∂Ginibre.schurCoordinateVolume n
+@Ginibre.integrableOn_schurEntryCoordinates_image_iff : ∀ {n : ℕ} (S : Matrix (Fin n) (Fin n) ℂ)
+  (hS : S.IsUpperTriangular) (hz : Function.Injective fun i => S i i) (s : Set (Ginibre.SchurTangent n)),
+  MeasurableSet s →
+    s ⊆ (Ginibre.schurLocalChart S hS hz).source →
+      ∀ (g : Ginibre.SchurTangent n → ℝ),
+        MeasureTheory.IntegrableOn g (Ginibre.schurEntryCoordinates S '' s) (Ginibre.schurCoordinateVolume n) ↔
+          MeasureTheory.IntegrableOn (fun x => Ginibre.schurJacobianWeight S x * g (Ginibre.schurEntryCoordinates S x))
+            s (Ginibre.schurCoordinateVolume n)
+@Ginibre.integral_schurEntryCoordinates_image : ∀ {n : ℕ} (S : Matrix (Fin n) (Fin n) ℂ) (hS : S.IsUpperTriangular)
+  (hz : Function.Injective fun i => S i i) (s : Set (Ginibre.SchurTangent n)),
+  MeasurableSet s →
+    s ⊆ (Ginibre.schurLocalChart S hS hz).source →
+      ∀ (g : Ginibre.SchurTangent n → ℝ),
+        ∫ (y : Ginibre.SchurTangent n) in Ginibre.schurEntryCoordinates S '' s, g y ∂Ginibre.schurCoordinateVolume n =
+          ∫ (x : Ginibre.SchurTangent n) in s,
+            Ginibre.schurJacobianWeight S x * g (Ginibre.schurEntryCoordinates S x) ∂Ginibre.schurCoordinateVolume n
+def Ginibre.schurCoordinateVolume : (n : ℕ) → MeasureTheory.Measure (Ginibre.SchurTangent n) :=
+fun n => MeasureTheory.Measure.map (⇑(Ginibre.schurFlatEntryEquiv n)) MeasureTheory.volume
+def Ginibre.schurAngularJacobian : {n : ℕ} → (Ginibre.SchurLower n → ℂ) → ℝ :=
+fun {n} w => LinearMap.det (Ginibre.schurLowerEntries ∘ₗ Ginibre.schurAngularFrame w)
+def Ginibre.schurAngularFrame : {n : ℕ} →
+  (Ginibre.SchurLower n → ℂ) → (Ginibre.SchurLower n → ℂ) →ₗ[ℝ] Matrix (Fin n) (Fin n) ℂ :=
+fun {n} w =>
+  {
+    toFun := fun v =>
+      NormedSpace.exp (-(Ginibre.schurAngularCLM n) w) *
+        (fderiv ℝ (fun u => NormedSpace.exp ((Ginibre.schurAngularCLM n) u)) w) v,
+    map_add' := ⋯, map_smul' := ⋯ }
+'Ginibre.schurCoordinateSpectrum_extended' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.measurable_schurCoordinateDiagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exists_measurable_schurSpectrum_patch' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exists_measurable_schurCoordinateSpectrum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.aemeasurable_schurCoordinateSpectrum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.continuous_gaussianMatrixDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.measurable_gaussianCoordinateDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianCoordinateLaw_isProbability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_gaussianCoordinateLaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianCoordinateLaw_eq_withDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianCoordinateDensity_entrySplit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurEntryAddress_injective' depends on axioms: [propext, Quot.sound]
+'Ginibre.schurEntryAddress_surjective' depends on axioms: [propext, Quot.sound]
+'Ginibre.schurFlatProductEquiv_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurFlatProductEquiv_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurFlatProductEquiv_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurFlatProductEquiv_measurePreserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurDiagonalWeight_eq_pair_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSpectralCoefficient_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.determinantDensity_eq_schurSpectralWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSpectralWeight_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSpectralWeight_eq_inv_coefficient_mul_candidate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Ginibre.integrable_schurSpectralWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_schurSpectralWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurSpectralWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.slater_norm_sq_permute' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.determinantDensity_permute' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.determinantDensity_eq_zero_of_not_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSpectralWeight_permute' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSpectralWeight_eq_zero_of_not_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurPermute_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurPermute_measurePreserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.injective_of_schurOrdered_permute' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurOrderingPermutation_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.measurableSet_schurDiagonalOrdered' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.measurableSet_schurOrderedDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurExpCoordinates_injOn_orderedDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurEntryCoordinates_injOn_orderedDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurEntryCoordinates_ordered_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrableOn_schurEntryCoordinates_ordered_image_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Ginibre.orderedSchurData_nonempty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSpectrum_ordered' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSpectrum_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.charpoly_eq_prod_schurSpectrum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSpectrum_unitary_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSpectrum_schurExtendedAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurCoordinateSpectrum_entrySplit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.contDiff_schurEntryCoordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurDiagonalWeight_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurAngularJacobian_eq_reference_quotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.continuous_schurAngularJacobian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.continuous_schurDiagonalWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.continuous_schurGaussianProductWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurFlatEntryMeasurableEquiv_measurePreserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurProductEquiv_measurePreserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurProductEquiv_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurProductEquiv_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurProductEquiv_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurProductCoordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurProductCoordinates_iterated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurReferenceSpectrum_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.diagonal_unitary_conjugates_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.phase_frames_reference_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurAngularUnitary_unitary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.isOpen_schurAngularSource' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.zero_mem_schurAngularSource' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurDiagonalChart_slice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurAngularSource_reference_injOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurAngularSource_ordered_collision' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurAngularSource_full_ordered_collision' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.measurableSet_schurSpectralChamber' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurDisjointDomain_eq_product_preimage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.setLIntegral_schurDisjointDomain_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.setLIntegral_schurProduct_iterated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurCoordinateGaussianWeight_eq_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurGaussianScale_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurProduct_test_auxiliary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.factorial_mul_schurChamberMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.factorial_spectralCoefficient_mul_chamberMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.inv_schurChamberMass_eq_factorial_coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianOrderedSpectralLaw_eq_candidate_chamber' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurSpectrum_symmetric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurCoordinateSpectrum_flatEntry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_gaussianMatrix_symmetric_spectrum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.upper_eq_diagonal_add_schurStrictUpper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurProductEquiv_symm_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurProductEquiv_symm_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurDiagonalWeight_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurJacobianWeight_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianMatrixDensity_schur_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurGaussianProductWeight_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurGaussianProductWeight_auxiliary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSylvesterMatrix_diag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSylvesterMatrix_isLowerTriangular' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.det_schurSylvesterMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSylvesterMatrix_single' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurSylvesterMatrix_mulVec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLowerEntries_sylvester' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.isUnit_schurSylvesterMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.upperTriangular_of_ordered_intertwiner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.hermitian_upper_eq_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurReferenceDiagonal_isHermitian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.isOpen_schurReferenceAdmissible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.zero_mem_schurReferenceAdmissible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurReferenceAdmissible_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurReferenceAdmissible_upper_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exists_open_referenceOrbit_neighborhood' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_gaussianLabelledSpectralLaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianLabelledSpectralLaw_eq_withDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianLabelledSpectralLaw_isProbability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.charpoly_eq_prod_permuted_schurSpectrum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.prependPoints_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.prependPoints_retained' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.marginalIndexAddress_injective' depends on axioms: [propext, Quot.sound]
+'Ginibre.marginalIndexAddress_surjective' depends on axioms: [propext, Quot.sound]
+'Ginibre.marginalProductEquiv_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.marginalProductEquiv_retained' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.marginalProductEquiv_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.marginalProductEquiv_measurePreserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_marginalProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurExtendedAt_injOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.upper_diagonal_unitary_conjugation_diag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exists_countable_extended_schur_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianMatrix_countable_extended_schur_cover_ae' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.unitary_upper_eq_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.unitary_diagonal_phase_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.norm_unitary_diagonal_phase' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schur_relative_frame_unitary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schur_relative_frame_intertwines' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schur_relative_frame_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.ordered_schur_factors_phase_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.measurable_schurLabelAverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLabelAverage_symmetric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.measurable_determinantDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_candidate_permute' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_candidate_labelAverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_gaussianMatrix_labelAverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exists_schurOrderingPermutation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.upper_mul_apply_diag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.upper_conjugation_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gramSchmidt_eigenbasis_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exists_orthonormal_ordered_schur_basis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exists_unitary_ordered_schur_of_separable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianMatrix_exists_ordered_schur_ae' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurProductEquiv_symm_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.measurable_schurSpectralWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurProduct_test_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurDisjointDomain_diagonal_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurDisjointDomain_diagonal_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurLexCode_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurDiagonalOrdered_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.mem_range_diagonal_iff_charpoly_eval_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.upper_diagonal_range_eq_of_charpoly_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurDiagonalOrdered_eq_of_range_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.ordered_upper_diagonals_eq_of_charpoly_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.measurable_retainedSpectrum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.retainedSpectrum_prepend' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.measurable_ginibreMarginalDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_determinantDensity_prepend' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_candidate_retained' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_gaussianRetainedSpectralLaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianRetainedSpectralLaw_eq_withDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.factorial_mul_ginibreMarginalDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.ginibreFactorialCorrelationMeasure_eq_kernelDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurExtendedEntryAt_eq_comp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.hasFDerivAt_schurExtendedEntryAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.abs_det_fderiv_schurExtendedEntryAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurExtendedEntryAt_injOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.measurableSet_schurExtendedEntryAt_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurExtendedEntryAt_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianMatrixDensity_unitary_conjugate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianMatrixDensity_schurExtendedAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurSpectrum_proportional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurAngularCoefficient_mul_chamberMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurChamberMass_ne_zero_and_ne_top' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurAngularCoefficient_eq_inv_chamberMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurSpectrum_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianOrderedSpectralLaw_isProbability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussianOrderedSpectralLaw_eq_withDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.measurableSet_schurPermutedChamber' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.pairwise_schurPermutedChamber' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.injective_mem_iUnion_schurPermutedChamber' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurPermutedChamber_symmetric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurWeight_eq_iUnion_chambers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurWeight_symmetric_eq_factorial_chamber' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Ginibre.measurableSet_schurDisjointEntryImage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurDisjointEntryImage_eq_split_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.pairwise_schurDisjointEntryImage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.entrySplit_simple_mem_iUnion_schurDisjointEntryImage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Ginibre.gaussianCoordinate_mem_iUnion_schurDisjointEntryImage_ae' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Ginibre.setLIntegral_gaussianCoordinateLaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_gaussian_schurDisjointEntryImage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_gaussianCoordinateLaw_schur_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurFrameAt_unitary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurExtendedAt_eq_frame' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.continuous_schurReferenceAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurReferenceAt_injOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.measurableSet_schurReferenceAt_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.ordered_schur_collision_reference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurExtendedAt_collision_reference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.reference_collision_upper_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurExtendedAt_mem_image_iff_reference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurStrictUpper_isUpperTriangular' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurStrictUpper_diag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurStrictUpper_apply_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.matrixEnergy_entry_partition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.matrixEnergy_upper_entries' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.matrixEnergy_schurStrictUpper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exp_neg_sum_norm_sq_eq_prod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integrable_exp_neg_sum_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_exp_neg_sum_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.integral_schurStrictUpper_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.lintegral_schurStrictUpper_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exists_countable_schur_angular_atlas' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.ginibreCorrelationDensity_eq_kernelDet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.gaussian_matrix_density_and_correlations' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.ginibreCorrelationDensity_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.ginibreCorrelationDensity_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.ginibreCorrelationDensity_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurAngularAtlasSet_countable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurAngularAtlasSet_covers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurAngularAtlasSet_nonempty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.range_schurAngularAtlasFrame' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.measurableSet_schurAngularPatchImage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.measurableSet_schurAngularRegion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.measurableSet_schurDisjointDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurDisjointDomain_subset_ordered' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.pairwiseDisjoint_schurExtendedAt_disjointDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurAngularAtlasSet_extended_covers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.exists_first_schurAngularPatch' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.simple_mem_iUnion_schurExtendedAt_disjointDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+Ginibre.gaussianLabelledSpectralLaw_eq_withDensity : ∀ (n : ℕ) {a : ℝ},
+  0 < a →
+    Ginibre.gaussianLabelledSpectralLaw n a =
+      MeasureTheory.volume.withDensity fun z => ENNReal.ofReal (Ginibre.determinantDensity n a z)
+Ginibre.gaussianOrderedSpectralLaw_eq_candidate_chamber : ∀ (n : ℕ) {a : ℝ},
+  0 < a →
+    Ginibre.gaussianOrderedSpectralLaw n a =
+      (MeasureTheory.volume.restrict (Ginibre.schurSpectralChamber n)).withDensity fun z =>
+        ↑n.factorial * ENNReal.ofReal (Ginibre.determinantDensity n a z)
+Ginibre.lintegral_gaussianMatrix_labelAverage : ∀ (n : ℕ) {a : ℝ},
+  0 < a →
+    ∀ (f : (Fin n → ℂ) → ENNReal),
+      Measurable f →
+        ∫⁻ (A : Fin n × Fin n → ℂ),
+            Ginibre.schurLabelAverage n f
+              (Ginibre.schurSpectrum (Matrix.of (Function.curry A))) ∂Ginibre.gaussianMatrixLaw n a =
+          ∫⁻ (z : Fin n → ℂ), ENNReal.ofReal (Ginibre.determinantDensity n a z) * f z
+Ginibre.gaussian_matrix_density_and_correlations : ∀ (k m : ℕ),
+  0 < k + m →
+    (Ginibre.gaussianLabelledSpectralLaw (k + m) ↑(k + m) =
+        MeasureTheory.volume.withDensity fun z => ENNReal.ofReal (Ginibre.determinantDensity (k + m) (↑(k + m)) z)) ∧
+      ∀ (z : Fin k → ℂ),
+        MeasureTheory.Integrable
+            (fun w => Ginibre.determinantDensity (k + m) (↑(k + m)) (Ginibre.prependPoints k m w z))
+            MeasureTheory.volume ∧
+          Ginibre.ginibreCorrelationDensity k m z = (Ginibre.kernelDet (Ginibre.kernel (k + m)) k z).re
+Ginibre.gaussianRetainedSpectralLaw_eq_withDensity : ∀ (k m : ℕ),
+  0 < k + m →
+    Ginibre.gaussianRetainedSpectralLaw k m =
+      MeasureTheory.volume.withDensity fun z => ENNReal.ofReal (Ginibre.ginibreMarginalDensity k m z)
+Ginibre.ginibreFactorialCorrelationMeasure_eq_kernelDensity : ∀ (k m : ℕ),
+  0 < k + m →
+    Ginibre.ginibreFactorialCorrelationMeasure k m =
+      MeasureTheory.volume.withDensity fun z => ENNReal.ofReal (Ginibre.kernelDet (Ginibre.kernel (k + m)) k z).re
+@Ginibre.charpoly_eq_prod_schurSpectrum : ∀ {n : ℕ} (A : Matrix (Fin n) (Fin n) ℂ),
+  A.charpoly.Separable → A.charpoly = ∏ i, (Polynomial.X - Polynomial.C (Ginibre.schurSpectrum A i))
+def Ginibre.gaussianLabelledSpectralLaw : (n : ℕ) → ℝ → MeasureTheory.Measure (Fin n → ℂ) :=
+fun n a =>
+  (↑n.factorial)⁻¹ • ∑ σ, MeasureTheory.Measure.map (⇑(Ginibre.schurPermute σ)) (Ginibre.gaussianOrderedSpectralLaw n a)
+def Ginibre.gaussianOrderedSpectralLaw : (n : ℕ) → ℝ → MeasureTheory.Measure (Fin n → ℂ) :=
+fun n a => MeasureTheory.Measure.map Ginibre.schurCoordinateSpectrum (Ginibre.gaussianCoordinateLaw n a)
+def Ginibre.schurCoordinateSpectrum : {n : ℕ} → Ginibre.SchurTangent n → Fin n → ℂ :=
+fun {n} x => Ginibre.schurSpectrum ((Ginibre.schurEntrySplit n).symm x)
+def Ginibre.schurSpectrum : {n : ℕ} → Matrix (Fin n) (Fin n) ℂ → Fin n → ℂ :=
+fun {n} A => if hA : A.charpoly.Separable then fun i => ↑(Classical.choice ⋯).upper i i else 0
+def Ginibre.ginibreFactorialCorrelationMeasure : (k : ℕ) → ℕ → MeasureTheory.Measure (Fin k → ℂ) :=
+fun k m => ENNReal.ofReal (↑(k + m).factorial / ↑m.factorial) • Ginibre.gaussianRetainedSpectralLaw k m
+'Ginibre.gaussianLabelledSpectralLaw_permute' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ginibre.schurFlatEntryMeasurableEquiv_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+def Ginibre.gaussianEntryLaw : ℝ → MeasureTheory.Measure ℂ :=
+fun a => MeasureTheory.volume.withDensity fun z => ENNReal.ofReal (Ginibre.complexGaussianDensity a z)
+def Ginibre.gaussianMatrixLaw : (n : ℕ) → ℝ → MeasureTheory.Measure (Fin n × Fin n → ℂ) :=
+fun n a => MeasureTheory.Measure.pi fun x => Ginibre.gaussianEntryLaw a
+def Ginibre.gaussianCoordinateLaw : (n : ℕ) → ℝ → MeasureTheory.Measure (Ginibre.SchurTangent n) :=
+fun n a => MeasureTheory.Measure.map (⇑(Ginibre.schurFlatEntryMeasurableEquiv n)) (Ginibre.gaussianMatrixLaw n a)
+def Ginibre.gaussianRetainedSpectralLaw : (k : ℕ) → ℕ → MeasureTheory.Measure (Fin k → ℂ) :=
+fun k m =>
+  MeasureTheory.Measure.map (Ginibre.retainedSpectrum k m) (Ginibre.gaussianLabelledSpectralLaw (k + m) ↑(k + m))
+def Ginibre.retainedSpectrum : (k m : ℕ) → (Fin (k + m) → ℂ) → Fin k → ℂ :=
+fun k m A => ((Ginibre.marginalProductEquiv k m) A).2
+def Ginibre.schurGlobalAngularCoefficient : ℕ → ℝ → ENNReal :=
+fun n a =>
+  ∑' (k : ℕ),
+    ENNReal.ofReal ((a / Real.pi) ^ (n * n) * (Real.pi / a) ^ Fintype.card (Ginibre.SchurLower n)) *
+      Ginibre.schurAngularMass n k
+Ginibre.lintegral_schurSpectrum_proportional : ∀ (n : ℕ) {a : ℝ},
+  0 < a →
+    ∀ (f : (Fin n → ℂ) → ENNReal),
+      Measurable f →
+        ∫⁻ (A : Ginibre.SchurTangent n), f (Ginibre.schurCoordinateSpectrum A) ∂Ginibre.gaussianCoordinateLaw n a =
+          Ginibre.schurGlobalAngularCoefficient n a *
+            ∫⁻ (z : Fin n → ℂ) in Ginibre.schurSpectralChamber n,
+              ENNReal.ofReal (Ginibre.schurSpectralWeight n a z) * f z
+Ginibre.gaussianLabelledSpectralLaw_permute : ∀ (n : ℕ) {a : ℝ},
+  0 < a →
+    ∀ (σ : Equiv.Perm (Fin n)),
+      MeasureTheory.Measure.map (⇑(Ginibre.schurPermute σ)) (Ginibre.gaussianLabelledSpectralLaw n a) =
+        Ginibre.gaussianLabelledSpectralLaw n a
+Exit code: 0

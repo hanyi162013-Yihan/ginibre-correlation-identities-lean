@@ -1,0 +1,538 @@
+import Ginibre
+
+/-! Audit the dependency boundary of each major result. Ordinary mathlib
+logical axioms (`propext`, `Classical.choice`, `Quot.sound`) are allowed;
+no external mathematical axiom or admitted proof is allowed. -/
+
+#print axioms Ginibre.integrableOn_radial_moment
+#print axioms Ginibre.integral_radial_even_moment
+#print axioms Ginibre.integral_angular_mode
+#print axioms Ginibre.integrable_of_polar_lift
+#print axioms Ginibre.integrable_polar_lift
+#print axioms Ginibre.integrable_norm_pow_mul_gaussian
+#print axioms Ginibre.integrable_gaussian_monomial
+#print axioms Ginibre.integral_norm_even_pow_mul_gaussian
+#print axioms Ginibre.angular_integral_eq_circleAverage
+#print axioms Ginibre.gaussian_monomial_circle
+#print axioms Ginibre.circleAverage_gaussian_monomial
+#print axioms Ginibre.integral_gaussian_monomial
+#print axioms Ginibre.integrable_finiteKernel_product
+#print axioms Ginibre.integral_finiteKernel_product
+#print axioms Ginibre.integrable_finiteKernel_norm_sq
+#print axioms Ginibre.integral_finiteKernel_norm_sq
+#print axioms Ginibre.gaussianBasis_inner_integrand
+#print axioms Ginibre.integrable_gaussianBasis_inner
+#print axioms Ginibre.integral_gaussianBasis_inner
+#print axioms Ginibre.gaussianBasis_product
+#print axioms Ginibre.kernel_eq_finiteKernel
+#print axioms Ginibre.kernel_diagonal
+#print axioms Ginibre.integrable_kernel_product
+#print axioms Ginibre.integral_kernel_product
+#print axioms Ginibre.integrable_kernelWeight_section
+#print axioms Ginibre.integral_kernelWeight_section
+#print axioms Ginibre.integrable_weighted_kernel_fst
+#print axioms Ginibre.integral_weighted_kernel_fst
+#print axioms Ginibre.weighted_projection
+#print axioms Ginibre.integrable_complexGaussianDensity
+#print axioms Ginibre.integral_complexGaussianDensity
+#print axioms Ginibre.gaussianEntryLaw_isProbability
+#print axioms Ginibre.gaussianMatrixLaw_isProbability
+#print axioms Ginibre.gaussianMatrix_entries_independent
+#print axioms Ginibre.gaussianMatrix_entry_map
+#print axioms Ginibre.integral_gaussianEntryLaw
+#print axioms Ginibre.integrable_gaussianEntryLaw_iff
+#print axioms Ginibre.integrable_gaussianMatrixDensity
+#print axioms Ginibre.integral_gaussianMatrixDensity
+#print axioms Ginibre.gaussianMatrixLaw_eq_withDensity
+#print axioms Ginibre.gaussianMatrixDensity_closedForm
+#print axioms Ginibre.singleton_hasEigenvalue_iff
+#print axioms Ginibre.singleton_first_correlation
+#print axioms Ginibre.slater_norm_sq_expand
+#print axioms Ginibre.integrable_slater_norm_sq
+#print axioms Ginibre.integral_permutation_product
+#print axioms Ginibre.integral_slater_norm_sq
+#print axioms Ginibre.det_finiteKernel_eq_slater_norm_sq
+#print axioms Ginibre.integrable_determinantDensity
+#print axioms Ginibre.integral_determinantDensity
+#print axioms Ginibre.determinantDensity_eq_kernel_determinant
+#print axioms Ginibre.slater_gaussianBasis_vandermonde
+#print axioms Ginibre.vandermonde_norm_sq
+#print axioms Ginibre.determinantDensity_vandermonde
+
+-- Include every remaining public helper, not only the endpoints.
+#print axioms Ginibre.determinantDensity_nonneg
+#print axioms Ginibre.finiteKernel_star
+#print axioms Ginibre.finiteKernel_product_expand
+#print axioms Ginibre.finiteKernel_norm_sq
+#print axioms Ginibre.basisCoefficient_pos
+#print axioms Ginibre.continuous_gaussianBasis
+#print axioms Ginibre.continuous_complexGaussianDensity
+#print axioms Ginibre.complexGaussianDensity_nonneg
+#print axioms Ginibre.complexGaussianDensity_one
+#print axioms Ginibre.kernel_zero
+#print axioms Ginibre.continuous_kernel
+#print axioms Ginibre.gaussianMatrixDensity_nonneg
+#print axioms Ginibre.polar_restrict_volume
+#print axioms Ginibre.kernel_star
+#print axioms Ginibre.kernelWeight_swap
+#print axioms Ginibre.sign_mul_sign
+
+-- General-dimensional determinant integration and its concrete specialization.
+#print axioms Ginibre.det_bordered
+#print axioms Ginibre.sum_entry_cofactor
+#print axioms Ginibre.kernelDet_zero
+#print axioms Ginibre.kernelDet_one
+#print axioms Ginibre.kernelDet_cons_eq
+#print axioms Ginibre.integrable_finiteKernel_diagonal
+#print axioms Ginibre.integral_finiteKernel_diagonal
+#print axioms Ginibre.integrable_kernelDet_cons
+#print axioms Ginibre.integral_kernelDet_cons
+#print axioms Ginibre.integral_finiteKernelDet_cons
+#print axioms Ginibre.finiteKernelDet_nonneg
+#print axioms Ginibre.kernelDet_nonneg
+#print axioms Ginibre.norm_kernelDet
+#print axioms Ginibre.continuous_kernelDet
+#print axioms Ginibre.integrable_kernel_diagonal
+#print axioms Ginibre.integral_kernel_diagonal
+#print axioms Ginibre.integrable_ginibreKernelDet_cons
+#print axioms Ginibre.integral_ginibreKernelDet_cons
+#print axioms Ginibre.prependPoints_cons
+#print axioms Ginibre.continuous_prependPoints
+#print axioms Ginibre.integrable_fin_cons_iff
+#print axioms Ginibre.integral_fin_cons
+#print axioms Ginibre.integrable_kernelDet_prepend
+#print axioms Ginibre.integral_kernelDet_prepend
+#print axioms Ginibre.marginal_factorial
+#print axioms Ginibre.integral_determinantDensity_prepend
+#print axioms Ginibre.integrable_determinantDensity_prepend
+#print axioms Ginibre.integral_determinantDensity_prepend_real
+
+-- Display the actual hypotheses, not just the logical axiom dependencies.
+#print axioms Ginibre.schurLower_lt_iff
+#print axioms Ginibre.schurLowerMatrix_diag
+#print axioms Ginibre.schurLowerMatrix_isLowerTriangular
+#print axioms Ginibre.det_schurLowerMatrix
+#print axioms Ginibre.norm_sq_det_schurLowerMatrix
+#print axioms Ginibre.schurLowerMatrix_eq_commutator_single
+#print axioms Ginibre.schurLowerMatrix_mulVec
+#print axioms Ginibre.det_complexRealBlock
+#print axioms Ginibre.complexRealBlock_zero
+#print axioms Ginibre.complexRealBlock_mulVec
+#print axioms Ginibre.det_realifyMatrix_block
+#print axioms Ginibre.realifyMatrix_blockTriangular
+#print axioms Ginibre.det_realifyMatrix_of_lowerTriangular
+#print axioms Ginibre.det_real_schurLowerMatrix
+#print axioms Ginibre.det_schur_bordered_differential
+#print axioms Ginibre.schurLower_ext
+#print axioms Ginibre.schurLowerEmbed_apply_lower
+#print axioms Ginibre.schurLowerEmbed_apply_of_le
+#print axioms Ginibre.schurSkewEmbed_conjTranspose
+#print axioms Ginibre.schurSkewEmbed_apply_lower
+#print axioms Ginibre.schurSkewEmbed_injective
+#print axioms Ginibre.schurLowerEmbed_conjTranspose_upper
+#print axioms Ginibre.upper_commutator_lower_zero
+#print axioms Ginibre.schurLowerMatrix_mulVec_skew
+#print axioms Ginibre.schur_differential_lower
+#print axioms Ginibre.det_real_schurLowerMatrix_pos
+#print axioms Ginibre.hasDerivAt_matrix_mul_entry
+#print axioms Ginibre.hasDerivAt_matrix_conjTranspose_entry
+#print axioms Ginibre.hasDerivAt_schur_conjugation_entry
+#print axioms Ginibre.unitary_curve_derivative_skew
+#print axioms Ginibre.hasDerivAt_schur_lower_entry
+#print axioms Ginibre.matrixEnergy_eq_trace
+#print axioms Ginibre.matrixEnergy_unitary_conjugate
+#print axioms Ginibre.matrixEnergy_diagonal_add
+#print axioms Ginibre.schur_gaussian_factorization
+#print axioms Ginibre.gaussianMatrixDensity_schur
+#print axioms Ginibre.polynomial_eval_ne_zero_ae
+#print axioms Ginibre.mvPolynomial_eval_ne_zero_ae_pi
+#print axioms Ginibre.mvPolynomial_zeroSet_measure_pi
+#print axioms Ginibre.mvPolynomial_zeroSet_volume
+#print axioms Ginibre.collisionPolynomial_eval
+#print axioms Ginibre.collisionPolynomial_eval_ne_zero_iff
+#print axioms Ginibre.diagonal_nat_charpoly_separable
+#print axioms Ginibre.collisionPolynomial_ne_zero
+#print axioms Ginibre.charpoly_separable_ae_volume
+#print axioms Ginibre.gaussianMatrix_charpoly_separable_ae
+#print axioms Ginibre.charpoly_unitary_conjugate
+#print axioms Ginibre.upper_charpoly_separable_iff
+#print axioms Ginibre.det_real_schurLowerMatrix_pos_of_separable
+#print axioms Ginibre.gaussianMatrix_schur_regular_ae
+
+-- Constructed Schur factors, full differential, and actual local charts.
+#print axioms Ginibre.card_charpoly_distinct_roots
+#print axioms Ginibre.exists_eigenbasis_of_charpoly_separable
+#print axioms Ginibre.toMatrix_eigenbasis
+#print axioms Ginibre.basisToMatrix_inverse
+#print axioms Ginibre.basisToMatrix_upper_reverse
+#print axioms Ginibre.gramSchmidt_eigenbasis_upper
+#print axioms Ginibre.exists_orthonormal_schur_basis
+#print axioms Ginibre.exists_unitary_schur_of_separable
+#print axioms Ginibre.exists_regular_unitary_schur_of_separable
+#print axioms Ginibre.gaussianMatrix_exists_regular_schur_ae
+#print axioms Ginibre.schurLowerEmbed_add
+#print axioms Ginibre.schurLowerEmbed_real_smul
+#print axioms Ginibre.schurSkewEmbed_add
+#print axioms Ginibre.schurSkewEmbed_real_smul
+#print axioms Ginibre.isUnit_schurLowerMatrix
+#print axioms Ginibre.schurTangentMap_lower
+#print axioms Ginibre.schurTangentMap_injective
+#print axioms Ginibre.schurTangentMap_surjective
+#print axioms Ginibre.schurTangentEquiv_apply
+#print axioms Ginibre.hasStrictFDerivAt_exp_linear
+#print axioms Ginibre.hasStrictFDerivAt_exp_conjugation
+#print axioms Ginibre.schurUnitaryParam_unitary
+#print axioms Ginibre.schurUnitaryParam_adjoint
+#print axioms Ginibre.schurExpCoordinates_zero
+#print axioms Ginibre.schurExpCoordinates_eq_conjugation
+#print axioms Ginibre.hasStrictFDerivAt_schurExpCoordinates
+#print axioms Ginibre.schurLocalChart_zero_mem_source
+#print axioms Ginibre.schurLocalChart_center_mem_target
+#print axioms Ginibre.schurChartAt_apply
+#print axioms Ginibre.schurChartAt_zero_mem_source
+#print axioms Ginibre.schurChartAt_center_mem_target
+#print axioms Ginibre.exists_schur_chart_of_separable
+#print axioms Ginibre.gaussianMatrix_schur_chart_coverage_ae
+#print axioms Ginibre.exists_schurFrame_target
+#print axioms Ginibre.exists_countable_schur_atlas
+#print axioms Ginibre.gaussianMatrix_countable_schur_atlas_ae
+#print axioms Ginibre.contDiff_exp_conjugation
+#print axioms Ginibre.contDiff_schurExpCoordinates
+#print axioms Ginibre.hasStrictFDerivAt_schurLocalChart_symm
+
+-- Actual statement audits for every major logical boundary.
+#check @Ginibre.weighted_projection
+#check @Ginibre.gaussianMatrixLaw_eq_withDensity
+#check @Ginibre.singleton_first_correlation
+#check @Ginibre.integral_determinantDensity
+#check @Ginibre.integral_ginibreKernelDet_cons
+#check @Ginibre.integrable_determinantDensity_prepend
+#check @Ginibre.integral_determinantDensity_prepend_real
+#check @Ginibre.det_real_schurLowerMatrix
+#check @Ginibre.hasDerivAt_schur_lower_entry
+#check @Ginibre.gaussianMatrixDensity_schur
+#check @Ginibre.gaussianMatrix_charpoly_separable_ae
+#check @Ginibre.gaussianMatrix_schur_regular_ae
+#check @Ginibre.exists_eigenbasis_of_charpoly_separable
+#check @Ginibre.gaussianMatrix_exists_regular_schur_ae
+#check @Ginibre.schurTangentEquiv
+#check @Ginibre.hasStrictFDerivAt_schurExpCoordinates
+#check @Ginibre.schurLocalChart
+#check @Ginibre.gaussianMatrix_schur_chart_coverage_ae
+#check @Ginibre.gaussianMatrix_countable_schur_atlas_ae
+#check @Ginibre.contDiff_schurExpCoordinates
+#check @Ginibre.hasStrictFDerivAt_schurLocalChart_symm
+
+-- Complete genuine Jacobians, moving frames, and concrete local integration.
+#print axioms Ginibre.det_block_lower_identity
+#print axioms Ginibre.det_complex_matrix_restrictScalars
+#print axioms Ginibre.fderiv_schurExpCoordinates_rotated
+#print axioms Ginibre.schurRotatedDifferential_eq
+#print axioms Ginibre.det_schurRotatedDifferential
+#print axioms Ginibre.schurAngularFrame_zero
+#print axioms Ginibre.schurAngularJacobian_zero
+#print axioms Ginibre.schurTangentMap_upper
+#print axioms Ginibre.det_schurCoordinateDifferential
+#print axioms Ginibre.hasStrictFDerivAt_schurEntryCoordinates
+#print axioms Ginibre.det_fderiv_schurEntryCoordinates
+#print axioms Ginibre.det_fderiv_schurEntryCoordinates_pos
+#print axioms Ginibre.schurLowerEntries_embed
+#print axioms Ginibre.schurLowerEntries_upper
+#print axioms Ginibre.schur_upper_residual
+#print axioms Ginibre.schurUpperEntries_upper
+#print axioms Ginibre.schurEntrySplit_apply
+#print axioms Ginibre.schurEntrySplit_symm_apply
+#print axioms Ginibre.matrixTwoSidedMul_entries
+#print axioms Ginibre.det_matrixTwoSidedMul
+#print axioms Ginibre.det_matrixTwoSidedMul_real_of_inverse
+#print axioms Ginibre.schurLowerEntries_commutator
+#print axioms Ginibre.schurMovingTangentMap_upper
+#print axioms Ginibre.det_schurMovingTangentMap
+#print axioms Ginibre.differentiable_exp_linear
+#print axioms Ginibre.exp_neg_linear_mul_exp
+#print axioms Ginibre.fderiv_exp_angular_conjugation_rotated
+#print axioms Ginibre.fderiv_mul_apply
+#print axioms Ginibre.inverse_frame_derivative
+#print axioms Ginibre.fderiv_conjugation_rotated
+#print axioms Ginibre.det_schurEntryConjugation
+#print axioms Ginibre.fderiv_schurEntryCoordinates_apply
+#print axioms Ginibre.schurRotatedDifferential_eq_output_comp
+#print axioms Ginibre.det_schurRotatedDifferential_eq
+#print axioms Ginibre.det_fderiv_schurEntryCoordinates_everywhere
+#print axioms Ginibre.abs_det_fderiv_schurEntryCoordinates
+#print axioms Ginibre.schurCoordinateVolume_isAddHaarMeasure
+#print axioms Ginibre.schurJacobianWeight_eq_abs_det
+#print axioms Ginibre.schurEntryCoordinates_injOn_source
+#print axioms Ginibre.differentiable_schurEntryCoordinates
+#print axioms Ginibre.lintegral_schurEntryCoordinates_image
+#print axioms Ginibre.integrableOn_schurEntryCoordinates_image_iff
+#print axioms Ginibre.integral_schurEntryCoordinates_image
+
+#check @Ginibre.det_fderiv_schurEntryCoordinates_everywhere
+#check @Ginibre.schurAngularJacobian_zero
+#check @Ginibre.lintegral_schurEntryCoordinates_image
+#check @Ginibre.integrableOn_schurEntryCoordinates_image_iff
+#check @Ginibre.integral_schurEntryCoordinates_image
+
+-- These are actual constructions, not postulated density/Jacobian fields.
+#print Ginibre.schurCoordinateVolume
+#print Ginibre.schurAngularJacobian
+#print Ginibre.schurAngularFrame
+
+-- Actual disjoint globalization, spectral laws, and correlation measures.
+#print axioms Ginibre.schurCoordinateSpectrum_extended
+#print axioms Ginibre.measurable_schurCoordinateDiagonal
+#print axioms Ginibre.exists_measurable_schurSpectrum_patch
+#print axioms Ginibre.exists_measurable_schurCoordinateSpectrum
+#print axioms Ginibre.aemeasurable_schurCoordinateSpectrum
+#print axioms Ginibre.continuous_gaussianMatrixDensity
+#print axioms Ginibre.measurable_gaussianCoordinateDensity
+#print axioms Ginibre.gaussianCoordinateLaw_isProbability
+#print axioms Ginibre.lintegral_gaussianCoordinateLaw
+#print axioms Ginibre.gaussianCoordinateLaw_eq_withDensity
+#print axioms Ginibre.gaussianCoordinateDensity_entrySplit
+#print axioms Ginibre.schurEntryAddress_injective
+#print axioms Ginibre.schurEntryAddress_surjective
+#print axioms Ginibre.schurFlatProductEquiv_lower
+#print axioms Ginibre.schurFlatProductEquiv_diagonal
+#print axioms Ginibre.schurFlatProductEquiv_upper
+#print axioms Ginibre.schurFlatProductEquiv_measurePreserving
+#print axioms Ginibre.schurDiagonalWeight_eq_pair_product
+#print axioms Ginibre.schurSpectralCoefficient_pos
+#print axioms Ginibre.determinantDensity_eq_schurSpectralWeight
+#print axioms Ginibre.schurSpectralWeight_nonneg
+#print axioms Ginibre.schurSpectralWeight_eq_inv_coefficient_mul_candidate
+#print axioms Ginibre.integrable_schurSpectralWeight
+#print axioms Ginibre.integral_schurSpectralWeight
+#print axioms Ginibre.lintegral_schurSpectralWeight
+#print axioms Ginibre.slater_norm_sq_permute
+#print axioms Ginibre.determinantDensity_permute
+#print axioms Ginibre.determinantDensity_eq_zero_of_not_injective
+#print axioms Ginibre.schurSpectralWeight_permute
+#print axioms Ginibre.schurSpectralWeight_eq_zero_of_not_injective
+#print axioms Ginibre.schurPermute_apply
+#print axioms Ginibre.schurPermute_measurePreserving
+#print axioms Ginibre.injective_of_schurOrdered_permute
+#print axioms Ginibre.schurOrderingPermutation_unique
+#print axioms Ginibre.measurableSet_schurDiagonalOrdered
+#print axioms Ginibre.measurableSet_schurOrderedDomain
+#print axioms Ginibre.schurExpCoordinates_injOn_orderedDomain
+#print axioms Ginibre.schurEntryCoordinates_injOn_orderedDomain
+#print axioms Ginibre.lintegral_schurEntryCoordinates_ordered_image
+#print axioms Ginibre.integrableOn_schurEntryCoordinates_ordered_image_iff
+#print axioms Ginibre.orderedSchurData_nonempty
+#print axioms Ginibre.schurSpectrum_ordered
+#print axioms Ginibre.schurSpectrum_injective
+#print axioms Ginibre.charpoly_eq_prod_schurSpectrum
+#print axioms Ginibre.schurSpectrum_unitary_upper
+#print axioms Ginibre.schurSpectrum_schurExtendedAt
+#print axioms Ginibre.schurCoordinateSpectrum_entrySplit
+#print axioms Ginibre.contDiff_schurEntryCoordinates
+#print axioms Ginibre.schurDiagonalWeight_pos
+#print axioms Ginibre.schurAngularJacobian_eq_reference_quotient
+#print axioms Ginibre.continuous_schurAngularJacobian
+#print axioms Ginibre.continuous_schurDiagonalWeight
+#print axioms Ginibre.continuous_schurGaussianProductWeight
+#print axioms Ginibre.schurFlatEntryMeasurableEquiv_measurePreserving
+#print axioms Ginibre.schurProductEquiv_measurePreserving
+#print axioms Ginibre.schurProductEquiv_lower
+#print axioms Ginibre.schurProductEquiv_diagonal
+#print axioms Ginibre.schurProductEquiv_upper
+#print axioms Ginibre.lintegral_schurProductCoordinates
+#print axioms Ginibre.lintegral_schurProductCoordinates_iterated
+#print axioms Ginibre.schurReferenceSpectrum_injective
+#print axioms Ginibre.diagonal_unitary_conjugates_diagonal
+#print axioms Ginibre.phase_frames_reference_eq
+#print axioms Ginibre.schurAngularUnitary_unitary
+#print axioms Ginibre.isOpen_schurAngularSource
+#print axioms Ginibre.zero_mem_schurAngularSource
+#print axioms Ginibre.schurDiagonalChart_slice
+#print axioms Ginibre.schurAngularSource_reference_injOn
+#print axioms Ginibre.schurAngularSource_ordered_collision
+#print axioms Ginibre.schurAngularSource_full_ordered_collision
+#print axioms Ginibre.measurableSet_schurSpectralChamber
+#print axioms Ginibre.schurDisjointDomain_eq_product_preimage
+#print axioms Ginibre.setLIntegral_schurDisjointDomain_product
+#print axioms Ginibre.setLIntegral_schurProduct_iterated
+#print axioms Ginibre.schurCoordinateGaussianWeight_eq_product
+#print axioms Ginibre.schurGaussianScale_pos
+#print axioms Ginibre.lintegral_schurProduct_test_auxiliary
+#print axioms Ginibre.factorial_mul_schurChamberMass
+#print axioms Ginibre.factorial_spectralCoefficient_mul_chamberMass
+#print axioms Ginibre.inv_schurChamberMass_eq_factorial_coefficient
+#print axioms Ginibre.gaussianOrderedSpectralLaw_eq_candidate_chamber
+#print axioms Ginibre.lintegral_schurSpectrum_symmetric
+#print axioms Ginibre.schurCoordinateSpectrum_flatEntry
+#print axioms Ginibre.lintegral_gaussianMatrix_symmetric_spectrum
+#print axioms Ginibre.upper_eq_diagonal_add_schurStrictUpper
+#print axioms Ginibre.schurProductEquiv_symm_lower
+#print axioms Ginibre.schurProductEquiv_symm_upper
+#print axioms Ginibre.schurDiagonalWeight_nonneg
+#print axioms Ginibre.schurJacobianWeight_product
+#print axioms Ginibre.gaussianMatrixDensity_schur_product
+#print axioms Ginibre.schurGaussianProductWeight_factorization
+#print axioms Ginibre.lintegral_schurGaussianProductWeight_auxiliary
+#print axioms Ginibre.schurSylvesterMatrix_diag
+#print axioms Ginibre.schurSylvesterMatrix_isLowerTriangular
+#print axioms Ginibre.det_schurSylvesterMatrix
+#print axioms Ginibre.schurSylvesterMatrix_single
+#print axioms Ginibre.schurSylvesterMatrix_mulVec
+#print axioms Ginibre.schurLowerEntries_sylvester
+#print axioms Ginibre.isUnit_schurSylvesterMatrix
+#print axioms Ginibre.upperTriangular_of_ordered_intertwiner
+#print axioms Ginibre.hermitian_upper_eq_diagonal
+#print axioms Ginibre.schurReferenceDiagonal_isHermitian
+#print axioms Ginibre.isOpen_schurReferenceAdmissible
+#print axioms Ginibre.zero_mem_schurReferenceAdmissible
+#print axioms Ginibre.schurReferenceAdmissible_diagonal
+#print axioms Ginibre.schurReferenceAdmissible_upper_zero
+#print axioms Ginibre.exists_open_referenceOrbit_neighborhood
+#print axioms Ginibre.lintegral_gaussianLabelledSpectralLaw
+#print axioms Ginibre.gaussianLabelledSpectralLaw_eq_withDensity
+#print axioms Ginibre.gaussianLabelledSpectralLaw_isProbability
+#print axioms Ginibre.charpoly_eq_prod_permuted_schurSpectrum
+#print axioms Ginibre.prependPoints_prefix
+#print axioms Ginibre.prependPoints_retained
+#print axioms Ginibre.marginalIndexAddress_injective
+#print axioms Ginibre.marginalIndexAddress_surjective
+#print axioms Ginibre.marginalProductEquiv_prefix
+#print axioms Ginibre.marginalProductEquiv_retained
+#print axioms Ginibre.marginalProductEquiv_symm
+#print axioms Ginibre.marginalProductEquiv_measurePreserving
+#print axioms Ginibre.lintegral_marginalProduct
+#print axioms Ginibre.schurExtendedAt_injOn
+#print axioms Ginibre.upper_diagonal_unitary_conjugation_diag
+#print axioms Ginibre.exists_countable_extended_schur_cover
+#print axioms Ginibre.gaussianMatrix_countable_extended_schur_cover_ae
+#print axioms Ginibre.unitary_upper_eq_diagonal
+#print axioms Ginibre.unitary_diagonal_phase_equation
+#print axioms Ginibre.norm_unitary_diagonal_phase
+#print axioms Ginibre.schur_relative_frame_unitary
+#print axioms Ginibre.schur_relative_frame_intertwines
+#print axioms Ginibre.schur_relative_frame_diagonal
+#print axioms Ginibre.ordered_schur_factors_phase_unique
+#print axioms Ginibre.measurable_schurLabelAverage
+#print axioms Ginibre.schurLabelAverage_symmetric
+#print axioms Ginibre.measurable_determinantDensity
+#print axioms Ginibre.lintegral_candidate_permute
+#print axioms Ginibre.lintegral_candidate_labelAverage
+#print axioms Ginibre.lintegral_gaussianMatrix_labelAverage
+#print axioms Ginibre.exists_schurOrderingPermutation
+#print axioms Ginibre.upper_mul_apply_diag
+#print axioms Ginibre.upper_conjugation_diagonal
+#print axioms Ginibre.gramSchmidt_eigenbasis_diagonal
+#print axioms Ginibre.exists_orthonormal_ordered_schur_basis
+#print axioms Ginibre.exists_unitary_ordered_schur_of_separable
+#print axioms Ginibre.gaussianMatrix_exists_ordered_schur_ae
+#print axioms Ginibre.schurProductEquiv_symm_diagonal
+#print axioms Ginibre.measurable_schurSpectralWeight
+#print axioms Ginibre.lintegral_schurProduct_test_separated
+#print axioms Ginibre.lintegral_schurDisjointDomain_diagonal_product
+#print axioms Ginibre.lintegral_schurDisjointDomain_diagonal_separated
+#print axioms Ginibre.schurLexCode_injective
+#print axioms Ginibre.schurDiagonalOrdered_injective
+#print axioms Ginibre.mem_range_diagonal_iff_charpoly_eval_eq_zero
+#print axioms Ginibre.upper_diagonal_range_eq_of_charpoly_eq
+#print axioms Ginibre.schurDiagonalOrdered_eq_of_range_eq
+#print axioms Ginibre.ordered_upper_diagonals_eq_of_charpoly_eq
+#print axioms Ginibre.measurable_retainedSpectrum
+#print axioms Ginibre.retainedSpectrum_prepend
+#print axioms Ginibre.measurable_ginibreMarginalDensity
+#print axioms Ginibre.lintegral_determinantDensity_prepend
+#print axioms Ginibre.lintegral_candidate_retained
+#print axioms Ginibre.lintegral_gaussianRetainedSpectralLaw
+#print axioms Ginibre.gaussianRetainedSpectralLaw_eq_withDensity
+#print axioms Ginibre.factorial_mul_ginibreMarginalDensity
+#print axioms Ginibre.ginibreFactorialCorrelationMeasure_eq_kernelDensity
+#print axioms Ginibre.schurExtendedEntryAt_eq_comp
+#print axioms Ginibre.hasFDerivAt_schurExtendedEntryAt
+#print axioms Ginibre.abs_det_fderiv_schurExtendedEntryAt
+#print axioms Ginibre.schurExtendedEntryAt_injOn
+#print axioms Ginibre.measurableSet_schurExtendedEntryAt_image
+#print axioms Ginibre.lintegral_schurExtendedEntryAt_image
+#print axioms Ginibre.gaussianMatrixDensity_unitary_conjugate
+#print axioms Ginibre.gaussianMatrixDensity_schurExtendedAt
+#print axioms Ginibre.lintegral_schurSpectrum_proportional
+#print axioms Ginibre.schurAngularCoefficient_mul_chamberMass
+#print axioms Ginibre.schurChamberMass_ne_zero_and_ne_top
+#print axioms Ginibre.schurAngularCoefficient_eq_inv_chamberMass
+#print axioms Ginibre.lintegral_schurSpectrum_normalized
+#print axioms Ginibre.gaussianOrderedSpectralLaw_isProbability
+#print axioms Ginibre.gaussianOrderedSpectralLaw_eq_withDensity
+#print axioms Ginibre.measurableSet_schurPermutedChamber
+#print axioms Ginibre.pairwise_schurPermutedChamber
+#print axioms Ginibre.injective_mem_iUnion_schurPermutedChamber
+#print axioms Ginibre.lintegral_schurPermutedChamber_symmetric
+#print axioms Ginibre.lintegral_schurWeight_eq_iUnion_chambers
+#print axioms Ginibre.lintegral_schurWeight_symmetric_eq_factorial_chamber
+#print axioms Ginibre.measurableSet_schurDisjointEntryImage
+#print axioms Ginibre.schurDisjointEntryImage_eq_split_image
+#print axioms Ginibre.pairwise_schurDisjointEntryImage
+#print axioms Ginibre.entrySplit_simple_mem_iUnion_schurDisjointEntryImage
+#print axioms Ginibre.gaussianCoordinate_mem_iUnion_schurDisjointEntryImage_ae
+#print axioms Ginibre.setLIntegral_gaussianCoordinateLaw
+#print axioms Ginibre.lintegral_gaussian_schurDisjointEntryImage
+#print axioms Ginibre.lintegral_gaussianCoordinateLaw_schur_sum
+#print axioms Ginibre.schurFrameAt_unitary
+#print axioms Ginibre.schurExtendedAt_eq_frame
+#print axioms Ginibre.continuous_schurReferenceAt
+#print axioms Ginibre.schurReferenceAt_injOn
+#print axioms Ginibre.measurableSet_schurReferenceAt_image
+#print axioms Ginibre.ordered_schur_collision_reference
+#print axioms Ginibre.schurExtendedAt_collision_reference
+#print axioms Ginibre.reference_collision_upper_transport
+#print axioms Ginibre.schurExtendedAt_mem_image_iff_reference
+#print axioms Ginibre.schurStrictUpper_isUpperTriangular
+#print axioms Ginibre.schurStrictUpper_diag
+#print axioms Ginibre.schurStrictUpper_apply_upper
+#print axioms Ginibre.matrixEnergy_entry_partition
+#print axioms Ginibre.matrixEnergy_upper_entries
+#print axioms Ginibre.matrixEnergy_schurStrictUpper
+#print axioms Ginibre.exp_neg_sum_norm_sq_eq_prod
+#print axioms Ginibre.integrable_exp_neg_sum_norm_sq
+#print axioms Ginibre.integral_exp_neg_sum_norm_sq
+#print axioms Ginibre.integral_schurStrictUpper_gaussian
+#print axioms Ginibre.lintegral_schurStrictUpper_gaussian
+#print axioms Ginibre.exists_countable_schur_angular_atlas
+#print axioms Ginibre.ginibreCorrelationDensity_eq_kernelDet
+#print axioms Ginibre.gaussian_matrix_density_and_correlations
+#print axioms Ginibre.ginibreCorrelationDensity_zero
+#print axioms Ginibre.ginibreCorrelationDensity_one
+#print axioms Ginibre.ginibreCorrelationDensity_two
+#print axioms Ginibre.schurAngularAtlasSet_countable
+#print axioms Ginibre.schurAngularAtlasSet_covers
+#print axioms Ginibre.schurAngularAtlasSet_nonempty
+#print axioms Ginibre.range_schurAngularAtlasFrame
+#print axioms Ginibre.measurableSet_schurAngularPatchImage
+#print axioms Ginibre.measurableSet_schurAngularRegion
+#print axioms Ginibre.measurableSet_schurDisjointDomain
+#print axioms Ginibre.schurDisjointDomain_subset_ordered
+#print axioms Ginibre.pairwiseDisjoint_schurExtendedAt_disjointDomain
+#print axioms Ginibre.schurAngularAtlasSet_extended_covers
+#print axioms Ginibre.exists_first_schurAngularPatch
+#print axioms Ginibre.simple_mem_iUnion_schurExtendedAt_disjointDomain
+
+#check @Ginibre.gaussianLabelledSpectralLaw_eq_withDensity
+#check @Ginibre.gaussianOrderedSpectralLaw_eq_candidate_chamber
+#check @Ginibre.lintegral_gaussianMatrix_labelAverage
+#check @Ginibre.gaussian_matrix_density_and_correlations
+#check @Ginibre.gaussianRetainedSpectralLaw_eq_withDensity
+#check @Ginibre.ginibreFactorialCorrelationMeasure_eq_kernelDensity
+#check @Ginibre.charpoly_eq_prod_schurSpectrum
+#print Ginibre.gaussianLabelledSpectralLaw
+#print Ginibre.gaussianOrderedSpectralLaw
+#print Ginibre.schurCoordinateSpectrum
+#print Ginibre.schurSpectrum
+#print Ginibre.ginibreFactorialCorrelationMeasure
+#print axioms Ginibre.gaussianLabelledSpectralLaw_permute
+#print axioms Ginibre.schurFlatEntryMeasurableEquiv_apply
+
+-- Expose the complete entry-law -> spectral pushforward -> retained-law chain.
+#print Ginibre.gaussianEntryLaw
+#print Ginibre.gaussianMatrixLaw
+#print Ginibre.gaussianCoordinateLaw
+#print Ginibre.gaussianRetainedSpectralLaw
+#print Ginibre.retainedSpectrum
+#print Ginibre.schurGlobalAngularCoefficient
+#check @Ginibre.lintegral_schurSpectrum_proportional
+#check @Ginibre.gaussianLabelledSpectralLaw_permute

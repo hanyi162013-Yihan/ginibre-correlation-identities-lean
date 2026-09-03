@@ -1,0 +1,6 @@
+.lake/
+audit/*.log
+tmp/
+verification-ci/
+__pycache__/
+.DS_Store
