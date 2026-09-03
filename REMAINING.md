@@ -41,11 +41,14 @@ in the standard equivalent convention as `n!/(n-k)!` times its
 `k`-label marginal. Its kernel-determinant density is proved at measure
 level, not just as a candidate marginal integral.
 
-A separate combinatorial API expressing this measure as the expectation
-of a sum over injective index selections has not been added. Nor is a
-separate library of signed linear-statistic expectation/covariance
-corollaries included. Those are downstream wrappers around the proved
-measure identities, not additional assumptions used here.
+The `codex/linear-statistics` extension adds the separate combinatorial
+API expressing this measure as the expectation of a sum over injective
+index selections, signed spectral integration with L1 transport, and
+the actual linear-statistic expectation/covariance/variance formulas.
+The L2 hypotheses imply every required intermediate L1 assertion.
+Zero and one dimensions are handled explicitly. The extension contains
+62 additional theorems in seven modules; its cloud verification status
+is stated in the README. It adds no external mathematical interface.
 
 ## Outside this independent task
 

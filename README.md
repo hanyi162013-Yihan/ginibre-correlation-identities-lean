@@ -47,8 +47,34 @@ the last completed audit until the branch run passes.
   `ginibreCorrelationDensity_two` give the one- and two-point formulas.
 
 The correlation measure uses the standard `n!/(n-k)!`-scaled marginal
-of an exchangeable labelled spectrum. A separate API for sums over
-injective index selections is not used in its definition.
+of an exchangeable labelled spectrum. The statistics extension proves
+the equivalent actual-matrix Campbell formula as a separate theorem:
+`gaussianMatrix_factorialStatistic` integrates the sum over all injective
+index selections against the actual iid Gaussian matrix law.
+
+## Linear-statistic extension
+
+Signed integration and its L1 criteria are transported from the actual
+spectral pushforward, not inferred from a formal integral identity.
+For a real measurable test `f`, write `L_f = sum_i f(lambda_i)` and
+`I_n(z) = K_n(z,z) = n rho_n(z)`. The new endpoints are:
+
+- `gaussianMatrix_integral_linearStatistic_all`: `E L_f = integral f I_n`.
+- `gaussianEigenvalueCovariance_all`: the actual covariance is
+  `integral f g I_n - integral f(z) g(w) |K_n(z,w)|²`.
+- `gaussianEigenvalueVariance_all_energy`: the actual variance is
+  `1/2 * integral (f(z)-f(w))² |K_n(z,w)|²`.
+- `gaussianEigenvalueVariance_all_le`: the explicit bound
+  `0 <= Var L_f <= 2 * integral f² I_n`.
+
+The second-order results assume only the natural measurability and
+`integral |f|² I_n < infinity` conditions (and likewise for `g`). All
+intermediate one-/two-point L1 requirements are proved from these
+conditions. Unbounded tests are allowed. The all-dimensions endpoints
+include zero and one; the one-dimensional proof uses the rank-one
+kernel and the one-point law, not a nonexistent two-label marginal.
+These extension endpoints remain subject to the branch verification
+status stated at the top of this README.
 
 ## Models and normalization
 
@@ -215,10 +241,18 @@ as run artifacts; the checked-in logs below document the local checkpoint.
 | `Ginibre/ActualCorrelations.lean` | All finite correlation densities and the one-/two-point formulas |
 | `Ginibre/MarginalCoordinates.lean` | Concrete volume-preserving coordinates for marginal Fubini |
 | `Ginibre/ActualMarginals.lean` | Actual retained-label laws and factorial correlation measures |
+| `Ginibre/SpectralIntegrals.lean` | Signed integrals and genuine L1 transport from actual matrix spectra |
+| `Ginibre/SpectralCounting.lean` | Arbitrary injective index selections and the actual Campbell formula |
+| `Ginibre/StatisticKernels.lean` | One-/two-point intensities and planar product-coordinate conversions |
+| `Ginibre/LinearStatistics.lean` | Finite diagonal decomposition and actual first/mixed second moments |
+| `Ginibre/StatisticIntegrability.lean` | Weighted L2-to-L1, signed projection, and mixed-kernel domination |
+| `Ginibre/GaussianCovariance.lean` | Actual covariance, symmetric variance energy, and the L2 bound |
+| `Ginibre/AllDimensionsStatistics.lean` | Rank-one proof and all-dimensional expectation/covariance/variance |
 
 Other authored files: `Ginibre.lean`, `Audit.lean`, `lean-toolchain`,
 `lakefile.toml`, `lake-manifest.json`, `.gitignore`, this README,
-`SOURCE_NOTES.md`, `REMAINING.md`, and the audit records.
+`SOURCE_NOTES.md`, `REMAINING.md`, `scripts/check_audit.py`,
+`.github/workflows/lean.yml`, and the audit records.
 Ignored `tmp/pdfs/` contains unchanged reference material; `.lake/`
 contains only this project's dependency/build snapshot.
 

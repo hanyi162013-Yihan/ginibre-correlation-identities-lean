@@ -55,7 +55,13 @@ theorem gaussianEigenvalueCovariance_one (f g : ℂ → ℝ)
     funext p
     rw [show p = (p.1, p.2) from rfl, kernelWeight_one]
     ring
-  rw [he, integral_prod_mul]
+  rw [he]
+  have hprod : (∫ p : ℂ × ℂ,
+      (f p.1 * ginibreIntensity 1 p.1) * (g p.2 * ginibreIntensity 1 p.2)) =
+      (∫ z, f z * ginibreIntensity 1 z) * ∫ z, g z * ginibreIntensity 1 z :=
+    integral_prod_mul (fun z => f z * ginibreIntensity 1 z)
+      (fun z => g z * ginibreIntensity 1 z)
+  rw [hprod]
 
 /-- BC12 first-moment formula for every finite dimension, including zero. -/
 theorem gaussianMatrix_integral_linearStatistic_all (n : ℕ)

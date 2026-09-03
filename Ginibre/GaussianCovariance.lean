@@ -27,7 +27,7 @@ theorem gaussianMatrix_integral_linearStatistic_planar (m : ℕ)
     exact (integrable_finOne_iff _).mpr hi
   have h := gaussianMatrix_integral_linearStatistic m f hf hif
   simp_rw [kernelDet_one, kernel_diagonal_re] at h
-  rw [integral_finOne] at h
+  rw [integral_finOne (fun z => f z * ginibreIntensity (m + 1) z)] at h
   exact h
 
 /-- BC12 L2 against the one-point intensity implies actual statistic L1. -/
@@ -57,7 +57,8 @@ theorem gaussianMatrix_integral_linearStatistic_mul_planar (m : ℕ)
   have ho := integrable_finTwo_kernelDet_of_sq (m + 2) f g hf hg hf2 hg2
   have h := gaussianMatrix_integral_linearStatistic_mul m f g hf hg hd ho
   simp_rw [kernelDet_one, kernel_diagonal_re, pairStatisticTest, kernelDet_two_re] at h
-  rw [integral_finOne, integral_finTwo] at h
+  rw [integral_finOne (fun z => f z * g z * ginibreIntensity (m + 2) z),
+    integral_finTwo (fun p => f p.1 * g p.2 * ginibrePairIntensity (m + 2) p.1 p.2)] at h
   exact h
 
 /-- BC12 analytic covariance functional after inserting the one- and two-point densities. -/
@@ -74,7 +75,16 @@ theorem gaussianEigenvalueCovariance_eq (m : ℕ) (f g : ℂ → ℝ)
   have hf1 := integrable_mul_ginibreIntensity_of_sq (m + 2) f hf hf2
   have hg1 := integrable_mul_ginibreIntensity_of_sq (m + 2) g hg hg2
   have hk := integrable_kernelWeight_mul_of_sq (m + 2) f g hf hg hf2 hg2
-  have hp := hf1.mul_prod hg1
+  have hp : Integrable (fun p : ℂ × ℂ =>
+      (f p.1 * ginibreIntensity (m + 2) p.1) *
+        (g p.2 * ginibreIntensity (m + 2) p.2)) := hf1.mul_prod hg1
+  have hprod : (∫ p : ℂ × ℂ,
+      (f p.1 * ginibreIntensity (m + 2) p.1) *
+        (g p.2 * ginibreIntensity (m + 2) p.2)) =
+      (∫ z, f z * ginibreIntensity (m + 2) z) *
+        (∫ z, g z * ginibreIntensity (m + 2) z) :=
+    integral_prod_mul (fun z => f z * ginibreIntensity (m + 2) z)
+      (fun z => g z * ginibreIntensity (m + 2) z)
   rw [gaussianEigenvalueCovariance,
     gaussianMatrix_integral_linearStatistic_mul_planar m f g hf hg hf2 hg2,
     gaussianMatrix_integral_linearStatistic_planar (m + 1) f hf hf1,
@@ -88,7 +98,7 @@ theorem gaussianEigenvalueCovariance_eq (m : ℕ) (f g : ℂ → ℝ)
           (g p.2 * ginibreIntensity (m + 2) p.2) -
             f p.1 * g p.2 * kernelWeight (m + 2) p by
       funext p; unfold ginibrePairIntensity; ring,
-      integral_sub hp hk, integral_prod_mul]
+      integral_sub hp hk, hprod]
   rw [hpair]
   unfold ginibreCovarianceForm
   ring
@@ -112,18 +122,23 @@ theorem ginibreCovarianceForm_eq_energy (n : ℕ) (f g : ℂ → ℝ)
     ring
   have hrev : (∫ p : ℂ × ℂ, f p.2 * g p.1 * kernelWeight n p) =
       ∫ p : ℂ × ℂ, f p.1 * g p.2 * kernelWeight n p := by
-    rw [← integral_prod_swap (fun p : ℂ × ℂ => f p.2 * g p.1 * kernelWeight n p)]
-    apply integral_congr_ae
-    filter_upwards with p
-    rcases p with ⟨z, w⟩
-    simp only [Prod.swap]
-    rw [kernelWeight_swap]
-    ring
+    have hs := integral_prod_swap (μ := (volume : Measure ℂ)) (ν := volume)
+      (fun p : ℂ × ℂ => f p.1 * g p.2 * kernelWeight n p)
+    have he : (fun p : ℂ × ℂ => f p.swap.1 * g p.swap.2 * kernelWeight n p.swap) =
+        fun p => f p.2 * g p.1 * kernelWeight n p := by
+      funext p
+      change f p.2 * g p.1 * kernelWeight n (p.2, p.1) =
+        f p.2 * g p.1 * kernelWeight n (p.1, p.2)
+      rw [kernelWeight_swap n p.2 p.1]
+    rw [he] at hs
+    exact hs
+  have hsplit := integral_sub (hff.sub hfgk) (hrevInt.sub hss)
+  simp only [Pi.sub_apply] at hsplit
   rw [show (fun p : ℂ × ℂ => (f p.1 - f p.2) * (g p.1 - g p.2) * kernelWeight n p) =
       fun p => (f p.1 * g p.1 * kernelWeight n p - f p.1 * g p.2 * kernelWeight n p) -
         (f p.2 * g p.1 * kernelWeight n p - f p.2 * g p.2 * kernelWeight n p) by
     funext p; ring,
-    integral_sub (hff.sub hfgk) (hrevInt.sub hss), integral_sub hff hfgk,
+    hsplit, integral_sub hff hfgk,
     integral_sub hrevInt hss,
     integral_kernelWeight_fst n (fun z => f z * g z) (hf.mul hg) hfg,
     integral_kernelWeight_snd n (fun z => f z * g z) (hf.mul hg) hfg, hrev]
