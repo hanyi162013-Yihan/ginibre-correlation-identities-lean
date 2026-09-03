@@ -116,14 +116,22 @@ theorem gaussianEigenvalueVariance_all_le (n : ℕ) (f : ℂ → ℝ)
   | succ n =>
     cases n with
     | zero =>
-      have hf1 := integrable_mul_ginibreIntensity_of_sq 1 f hf hf2
-      unfold gaussianEigenvalueVariance gaussianEigenvalueCovariance
-      simp_rw [linearStatistic_one_mul]
-      have hs : Integrable (fun z => (f z * f z) * ginibreIntensity 1 z) := by
-        simpa only [pow_two] using hf2
-      rw [gaussianMatrix_integral_linearStatistic_planar 0 (fun z => f z * f z)
-          (hf.mul hf) hs,
-        gaussianMatrix_integral_linearStatistic_planar 0 f hf hf1]
+      change gaussianEigenvalueCovariance 1 f f ≤ _
+      rw [gaussianEigenvalueCovariance_one f f hf hf hf2 hf2]
+      unfold ginibreCovarianceForm
+      have he : (fun p : ℂ × ℂ => f p.1 * f p.2 * kernelWeight 1 p) =
+          fun p => (f p.1 * ginibreIntensity 1 p.1) *
+            (f p.2 * ginibreIntensity 1 p.2) := by
+        funext p
+        change f p.1 * f p.2 * kernelWeight 1 (p.1, p.2) = _
+        rw [kernelWeight_one]
+        ring
+      have hprod : (∫ p : ℂ × ℂ,
+          (f p.1 * ginibreIntensity 1 p.1) * (f p.2 * ginibreIntensity 1 p.2)) =
+          (∫ z, f z * ginibreIntensity 1 z) * ∫ z, f z * ginibreIntensity 1 z :=
+        integral_prod_mul (fun z => f z * ginibreIntensity 1 z)
+          (fun z => f z * ginibreIntensity 1 z)
+      rw [he, hprod]
       simp only [← pow_two]
       have hi : 0 ≤ ∫ z, f z ^ 2 * ginibreIntensity 1 z :=
         integral_nonneg (fun z => mul_nonneg (sq_nonneg _) (ginibreIntensity_nonneg 1 z))
