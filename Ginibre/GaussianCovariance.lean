@@ -185,7 +185,9 @@ theorem gaussianEigenvalueVariance_le (m : ℕ) (f : ℂ → ℝ)
       have hd : (1 / 2 : ℝ) * (f p.1 - f p.2) ^ 2 ≤ f p.1 ^ 2 + f p.2 ^ 2 := by
         nlinarith [sq_nonneg (f p.1 + f p.2)]
       have h := mul_le_mul_of_nonneg_right hd (sq_nonneg ‖kernel (m + 2) p.1 p.2‖)
-      change (1 / 2 : ℝ) * ((f p.1 - f p.2) ^ 2 * ‖kernel (m + 2) p.1 p.2‖ ^ 2) ≤ _
+      change (1 / 2 : ℝ) * ((f p.1 - f p.2) ^ 2 * ‖kernel (m + 2) p.1 p.2‖ ^ 2) ≤
+        f p.1 ^ 2 * ‖kernel (m + 2) p.1 p.2‖ ^ 2 +
+          f p.2 ^ 2 * ‖kernel (m + 2) p.1 p.2‖ ^ 2
       nlinarith only [h]
     calc
       _ ≤ _ := hb

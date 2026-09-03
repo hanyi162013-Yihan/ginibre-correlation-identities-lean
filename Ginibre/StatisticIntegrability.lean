@@ -16,13 +16,8 @@ namespace Ginibre
 
 /-- The one-point intensity is continuous. -/
 theorem continuous_ginibreIntensity (n : ℕ) : Continuous (ginibreIntensity n) := by
-  have he : ginibreIntensity n = fun z => (kernel n z z).re := by
-    funext z
-    exact (kernel_diagonal_re n z).symm
-  rw [he]
-  have hd : Continuous (fun z : ℂ => (z, z)) := continuous_id.prodMk continuous_id
-  have hk : Continuous (fun z : ℂ => kernel n z z) := (continuous_kernel n).comp hd
-  exact Complex.continuous_re.comp hk
+  unfold ginibreIntensity onePointDensity
+  fun_prop
 
 /-- Elementary product bound used in the L2-to-L1 arguments. -/
 theorem abs_mul_le_sq_add_sq_div_two (x y : ℝ) :
@@ -143,7 +138,8 @@ theorem integrable_kernelWeight_mul_of_sq (n : ℕ) (f g : ℂ → ℝ)
   filter_upwards with p
   dsimp only [Pi.mul_apply, Pi.add_apply, Function.comp_apply]
   unfold kernelWeight
-  rw [Real.norm_eq_abs, abs_mul, abs_mul, abs_of_nonneg (sq_nonneg _)]
+  rw [Real.norm_eq_abs, abs_mul, abs_mul,
+    abs_of_nonneg (sq_nonneg ‖kernel n p.1 p.2‖)]
   have h := mul_le_mul_of_nonneg_right
     (abs_mul_le_sq_add_sq_div_two (f p.1) (g p.2))
     (sq_nonneg ‖kernel n p.1 p.2‖)
